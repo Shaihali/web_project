@@ -1,20 +1,19 @@
 import { FC, MouseEvent, PropsWithChildren } from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
   border: transparent;
-  border-radius: ${(props: ButtonProps) => props.radius || 24}px;
+  border-radius: ${(props) => props.radius || 24}px;
   cursor: pointer;
   font: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 19.5px;
   font-family: inherit;
-  color: ${(props: ButtonProps) => (props.bg === "filled" ? "#fff" : "#000")};
-  background-color: ${(props: ButtonProps) =>
-    props.bg === "filled" ? "#44597D" : "#fff"};
-  width: ${(props: ButtonProps) => props.w || 188}px;
-  height: ${(props: ButtonProps) => props.h || 48}px;
+  color: ${(props) => (props.bg === "filled" ? "#fff" : "#000")};
+  background-color: ${(props) => (props.bg === "filled" ? "#44597D" : "#fff")};
+  width: ${(props) => props.w || 188}px;
+  height: ${(props) => props.h || 48}px;
 
   @media ${(props) => props.theme.media.tablet} {
     width: 172px;

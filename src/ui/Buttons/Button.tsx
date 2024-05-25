@@ -15,6 +15,12 @@ const StyledButton = styled.button`
     props.bg === "filled" ? "#44597D" : "#fff"};
   width: ${(props: ButtonProps) => props.w || 188}px;
   height: ${(props: ButtonProps) => props.h || 48}px;
+
+  @media ${(props) => props.theme.media.tablet} {
+    width: 172px;
+    height: 42px;
+    order: 2;
+  }
 `;
 
 type ButtonProps = PropsWithChildren & {

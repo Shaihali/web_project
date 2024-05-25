@@ -1,7 +1,8 @@
+import { BurgerMenu } from "@/components";
 import Link from "next/link";
 import styled from "styled-components";
 
-interface ListData {
+export interface ListData {
   id: number;
   label: string;
   href: string;
@@ -21,6 +22,9 @@ const List = styled.ul`
   align-items: center;
   margin: 0;
   padding: 0;
+  @media ${(props) => props.theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const Item = styled.li`
@@ -33,18 +37,25 @@ const Links = styled.link`
   font-weight: 400;
   line-height: 22.78px;
   color: #fff;
+
+  @media ${(props) => props.theme.media.large} {
+    font-size: 14px;
+  }
 `;
 
 export const NavMenu = () => {
   return (
-    <List>
-      {LIST_DATA.map((item) => (
-        <Item key={item.id}>
-          <Links as={Link} href={item.href}>
-            {item.label}
-          </Links>
-        </Item>
-      ))}
-    </List>
+    <>
+      <BurgerMenu data={LIST_DATA} />
+      <List>
+        {LIST_DATA.map((item) => (
+          <Item key={item.id}>
+            <Links as={Link} href={item.href}>
+              {item.label}
+            </Links>
+          </Item>
+        ))}
+      </List>
+    </>
   );
 };

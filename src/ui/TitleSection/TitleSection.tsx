@@ -4,6 +4,15 @@ import { Button } from "../Buttons";
 const TitleContainer = styled.div`
   display: flex;
 
+  @media ${(props) => props.theme.media.large_phone} {
+    flex-direction: column;
+    gap: 32px;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    flex-direction: column;
+    gap: 32px;
+  }
+
   > .titleBox {
     max-width: 850px;
     display: flex;
@@ -13,10 +22,24 @@ const TitleContainer = styled.div`
     & .titleBox_title {
       font-size: 64px;
       color: #44597d;
+
+      @media ${(props) => props.theme.media.tablet} {
+        font-size: 59px;
+      }
+      @media ${(props) => props.theme.media.phone} {
+        font-size: 46px;
+      }
     }
     & .titleBox_subTitle {
       font-size: 32px;
       color: #858a92;
+
+      @media ${(props) => props.theme.media.tablet} {
+        font-size: 22px;
+      }
+      @media ${(props) => props.theme.media.phone} {
+        font-size: 26px;
+      }
     }
   }
 
@@ -29,6 +52,13 @@ const TitleContainer = styled.div`
     & .descBox_text {
       font-size: 26px;
       color: #0b1424;
+
+      @media ${(props) => props.theme.media.tablet} {
+        font-size: 22px;
+      }
+      @media ${(props) => props.theme.media.phone} {
+        font-size: 20px;
+      }
     }
   }
 `;

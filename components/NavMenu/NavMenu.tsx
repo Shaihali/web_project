@@ -1,5 +1,5 @@
-import { INavMenu } from "@/app/types";
 import { BurgerMenuComponent } from "@/components";
+import { INavMenu } from "@/types";
 import Link from "next/link";
 import styled from "styled-components";
 

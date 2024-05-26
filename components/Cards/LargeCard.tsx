@@ -4,8 +4,7 @@ import { FC } from "react";
 import styled, { CSSProperties } from "styled-components";
 
 import { Badge, Text, Title } from "@/ui";
-
-import { ICardData } from "@/app/types";
+import { ICardData } from "@/types";
 
 const Card = styled.div`
   height: 540px;

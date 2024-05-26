@@ -3,7 +3,7 @@ import { FC } from "react";
 import styled from "styled-components";
 
 import { IconArrowRight } from "@tabler/icons-react";
-import { ISmallCardData } from "@/app/types";
+import { ISmallCardData } from "@/types";
 
 interface CardStyledProps {
   $image: string;

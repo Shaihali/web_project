@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "./BurgerMenu.css";
 import { FC } from "react";
-import { INavMenu } from "@/app/types";
+import { INavMenu } from "@/types";
 
 const Menu = styled.div`
   display: none;

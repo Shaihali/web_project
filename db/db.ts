@@ -1,4 +1,5 @@
-import { ICardData, ISmallCardData } from "@/app/types";
+import { ICardData, ISmallCardData } from "@/types";
+
 
 const IMAGE_PATH_LARGE =
   "https://s3-alpha-sig.figma.com/img/e14d/869c/b80b878fe960c3607502514fd5d35b42?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qxKGfgMtOsydyT62icU6h267d2-qItMYGY7tfhgGrfZXFJERARR75Y7fatof4PJijve2YJxv0EVg3Lx9HEDwWl-y2S4R9YoHPcJFP67WIdrKpbcRLyIINEv5nzG0rda-E6aPf26JXNPm6~LjvN42T5LkaVfkP2Uu5p3a8Unr3p8yn70db1k~A1A8P0y9VQJ4x0eD6Lb8n~6YQcuDTR2ZUA82hXrpJPpt2jYn3oaKydApe4KvkxmG~rEoOo~5dcxTWQWRtT13~HbaHaLC2W2pk321T2ZWNOjlLyBJR9GNXgaJpW7ymATj~C99bgjRcMNKtUxjSbxYdegN7L4fc5Gruw__";

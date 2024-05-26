@@ -7,6 +7,7 @@ import { Badge } from "@/components";
 
 const Card = styled.div`
   height: 540px;
+  min-width: 724px;
   max-width: 724px;
   background-color: #fff;
   border-radius: 24px;
@@ -14,11 +15,17 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  @media ${(props) => props.theme.media.large} {
+    min-width: 571px;
+    max-width: 571px;
+  }
   @media ${(props) => props.theme.media.tablet} {
+    min-width: 571px;
     max-width: 571px;
   }
 
   @media ${(props) => props.theme.media.phone} {
+    min-width: 540px;
     max-width: 540px;
   }
 `;

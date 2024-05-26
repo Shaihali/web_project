@@ -3,14 +3,24 @@ import styled from "styled-components";
 import { LargeCard } from "./Cards";
 import image from "../../assets/card/Image.jpg";
 import { StaticImageData } from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from "../Corousel";
 
 const Main = styled.main``;
 const Wrapper = styled.div`
   max-width: 1480px;
   margin: 0 auto;
+
+  @media ${(props) => props.theme.media.large} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media ${(props) => props.theme.media.tablet} {
+    max-width: 1166px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TopContainer = styled.div`
@@ -18,6 +28,10 @@ const TopContainer = styled.div`
   background-color: #cfd8dd;
   height: 678px;
   padding: 20px;
+
+  @media ${(props) => props.theme.media.tablet} {
+    padding: 20px 0 20px 20px;
+  }
 `;
 
 const CardContainer = styled.div`
@@ -41,7 +55,14 @@ const cardsData: CardData[] = [
     image: image,
   },
   {
-    id: 1,
+    id: 2,
+    title: "Профилактика правонарушений",
+    description:
+      "в Пермском крае через осуществление общественного контроля членами ОНК и ресоциализацию освободившихся из мест принудительного содержания через социальное сопровождение",
+    image: image,
+  },
+  {
+    id: 3,
     title: "Профилактика правонарушений",
     description:
       "в Пермском крае через осуществление общественного контроля членами ОНК и ресоциализацию освободившихся из мест принудительного содержания через социальное сопровождение",
@@ -55,11 +76,11 @@ export const MainComponent = () => {
       <TopContainer>
         <Wrapper>
           <TitleSection />
-          <CardContainer>
+          <Carousel>
             {cardsData.map((data) => (
               <LargeCard key={data.id} data={data} />
             ))}
-          </CardContainer>
+          </Carousel>
         </Wrapper>
       </TopContainer>
     </Main>

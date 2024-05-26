@@ -3,6 +3,39 @@ body {
 }
 
 h1,
+h3,
 p {
   margin: 0;
+}
+
+.slick-slider > .slick-slide {
+  width: 570px;
+}
+.slick-slide,
+.slick-slide > div {
+  width: 570px;
+}
+.slick-list > .slick-track {
+  display: flex;
+  gap: 32px;
+}
+
+@media screen and (max-width: 640px) {
+  .slick-track > .slick-slide {
+    width: 544px;
+  }
+  .slick-list > .slick-track {
+    gap: 10px;
+    /* transform: translate3d(-530px 0px 0px); */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slick-track > .slick-slide {
+    width: 544px;
+  }
+  .slick-list > .slick-track {
+    gap: 10px;
+    /* transform: translate3d(-530px 0px 0px); */
+  }
 }

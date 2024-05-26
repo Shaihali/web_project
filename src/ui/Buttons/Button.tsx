@@ -7,19 +7,13 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   font: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.7rem;
   line-height: 19.5px;
   font-family: inherit;
   color: ${(props) => (props.bg === "filled" ? "#fff" : "#000")};
   background-color: ${(props) => (props.bg === "filled" ? "#44597D" : "#fff")};
-  width: ${(props) => props.w || 188}px;
-  height: ${(props) => props.h || 48}px;
-
-  @media ${(props) => props.theme.media.tablet} {
-    width: 172px;
-    height: 42px;
-    order: 2;
-  }
+  width: ${(props) => props.w || 18.8}rem;
+  height: ${(props) => props.h || 4.8}rem;
 `;
 
 type ButtonProps = PropsWithChildren & {

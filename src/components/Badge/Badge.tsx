@@ -27,7 +27,7 @@ export const Badge: FC<BadgeProps> = ({ ...props }) => {
   const { status } = props;
   return (
     <BadgeStyled {...props}>
-      <Text color="#fff" size={18}>
+      <Text color="#fff" size={1.8}>
         {status === "completed" ? "ЗАВЕРШЕН" : "АКТИВНЫЙ"}
       </Text>
       <IconCheck />

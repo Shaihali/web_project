@@ -37,7 +37,10 @@ const AllPagesContainer = styled.div<AllPagesContainerProps>`
   display: flex;
   gap: 32px;
   transform: translateX(${(props) => props.offset}px);
-
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
   @media ${(props) => props.theme.media.large} {
     gap: 24px;
   }
@@ -50,6 +53,8 @@ const AllPagesContainer = styled.div<AllPagesContainerProps>`
 `;
 export const Carousel: FC<PropsWithChildren> = ({ children }) => {
   const [offset, setOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
   const handleLeftArrowClick = () => {
     setOffset((current) => {
@@ -77,21 +82,70 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
     });
   };
 
-  const handleWheel = () => {
-    console.log("ss");
+  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    setStartX(event.clientX);
+    console.log("событие Down", event.clientX);
   };
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (isDragging) {
+      const diff = startX - event.clientX;
+      const metrics = getSliderMetrics(sliderRef);
+      if (!metrics) {
+        return;
+      }
+      const cardWidth = metrics.elemntWidth + metrics.gapNum;
+      const newOffset = Math.round(diff / cardWidth) * cardWidth;
+      setOffset((current) => current - newOffset);
+      setStartX(event.clientX);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    console.log("событие Up");
+  };
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    setStartX(event.touches.clientX);
+  };
+
+  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (isDragging) {
+      const metrics = getSliderMetrics(sliderRef);
+      if (!metrics) {
+        return;
+      }
+
+      const newX = event.touches.clientX;
+      const diff = startX - newX;
+      setOffset((current) => current + diff);
+      setStartX(newX);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <MainContainer>
       <IconArrowBadgeLeft
         style={{ cursor: "pointer", position: "absolute", left: 0 }}
         onClick={handleLeftArrowClick}
       />
-      <Window>
-        <AllPagesContainer
-          offset={offset}
-          ref={sliderRef}
-          onWheel={handleWheel}
-        >
+      <Window
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <AllPagesContainer offset={offset} ref={sliderRef}>
           {children}
         </AllPagesContainer>
       </Window>

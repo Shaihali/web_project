@@ -1,4 +1,4 @@
-import { Button, Flex } from "@/ui";
+import { Button, Flex, Title } from "@/ui";
 import styled from "styled-components";
 import { NavMenu } from "./NavMenu";
 import { BurgerMenu } from "../BurgerMenu";
@@ -25,9 +25,7 @@ const HeaderBox = styled.div`
   }
 `;
 
-const Logo = styled.h2`
-  color: #fff;
-
+const Logo = styled(Title)`
   @media ${(props) => props.theme.media.tablet} {
     order: 1;
     font-weight: 400;
@@ -38,10 +36,12 @@ export const HeaderComponent = () => {
     <Header>
       <HeaderBox>
         <Flex>
-          <Logo>Выбор</Logo>
+          <Logo tag="h2" color="#fff" size={3.4}>
+            Выбор
+          </Logo>
           <NavMenu />
         </Flex>
-        <Button w={188} h={48}>
+        <Button w={18.8} h={4.8}>
           Помочь нам
         </Button>
       </HeaderBox>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import { CardData } from "../Main";
 import styled, { CSSProperties } from "styled-components";
@@ -90,9 +91,8 @@ export const LargeCard: FC<LargeCardProps> = ({ data }) => {
           style={imageStyle}
           
         /> */}
-        <picture>
-          <img src={data.image} alt={data.title} style={imageStyle} />
-        </picture>
+
+        <img src={data.image} alt={data.title} style={imageStyle} />
       </ImageBox>
     </Card>
   );

@@ -114,28 +114,28 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
     console.log("событие Up");
   };
 
-  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-    setStartX(event.touches[0].clientX);
-  };
+  // const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+  //   setIsDragging(true);
+  //   setStartX(event.touches[0].clientX);
+  // };
 
-  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
-    if (isDragging) {
-      const metrics = getSliderMetrics(sliderRef);
-      if (!metrics) {
-        return;
-      }
+  // const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+  //   if (isDragging) {
+  //     const metrics = getSliderMetrics(sliderRef);
+  //     if (!metrics) {
+  //       return;
+  //     }
 
-      const newX = event.touches[0].clientX;
-      const diff = startX - newX;
-      setOffset((current) => current + diff);
-      setStartX(newX);
-    }
-  };
+  //     const newX = event.touches[0].clientX;
+  //     const diff = startX - newX;
+  //     setOffset((current) => current + diff);
+  //     setStartX(newX);
+  //   }
+  // };
 
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
+  // const handleTouchEnd = () => {
+  //   setIsDragging(false);
+  // };
 
   return (
     <MainContainer>
@@ -148,9 +148,9 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        // onTouchStart={handleTouchStart}
+        // onTouchMove={handleTouchMove}
+        // onTouchEnd={handleTouchEnd}
       >
         <AllPagesContainer offset={offset} ref={sliderRef}>
           {children}

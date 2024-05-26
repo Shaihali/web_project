@@ -9,11 +9,11 @@ export interface ListData {
 }
 const LIST_DATA: ListData[] = [
   { id: 1, label: "ГЛАВНАЯ", href: "/" },
-  { id: 2, label: "КОНТАКТЫ", href: "/contacts" },
-  { id: 3, label: "КАК ПОМОЧЬ", href: "/help" },
-  { id: 4, label: "СОТРУДНИКИ", href: "/employes" },
-  { id: 5, label: "ПАРТНЕРЫ", href: "/partners" },
-  { id: 6, label: "РЕКВИЗИТЫ", href: "/requisites" },
+  { id: 2, label: "КОНТАКТЫ", href: "/" },
+  { id: 3, label: "КАК ПОМОЧЬ", href: "/" },
+  { id: 4, label: "СОТРУДНИКИ", href: "/" },
+  { id: 5, label: "ПАРТНЕРЫ", href: "/" },
+  { id: 6, label: "РЕКВИЗИТЫ", href: "/" },
 ];
 
 const List = styled.ul`

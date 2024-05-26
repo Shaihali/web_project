@@ -83,7 +83,7 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
   return (
     <MainContainer>
       <IconArrowBadgeLeft
-        style={{ cursor: "pointer", position: "absolute" }}
+        style={{ cursor: "pointer", position: "absolute", left: 0 }}
         onClick={handleLeftArrowClick}
       />
       <Window>
@@ -96,7 +96,7 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
         </AllPagesContainer>
       </Window>
       <IconArrowBadgeRight
-        style={{ cursor: "pointer", position: "absolute" }}
+        style={{ cursor: "pointer", position: "absolute", right: 0 }}
         onClick={handleRightArrowClick}
       />
     </MainContainer>

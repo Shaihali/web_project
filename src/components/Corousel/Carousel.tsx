@@ -1,6 +1,13 @@
 import { getSliderMetrics } from "@/utils";
 import { IconArrowBadgeLeft, IconArrowBadgeRight } from "@tabler/icons-react";
-import { FC, PropsWithChildren, ReactNode, useRef, useState } from "react";
+import {
+  FC,
+  PropsWithChildren,
+  ReactNode,
+  TouchList,
+  useRef,
+  useState,
+} from "react";
 import styled from "styled-components";
 
 interface AllPagesContainerProps {
@@ -109,7 +116,7 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     setIsDragging(true);
-    setStartX(event.touches.clientX);
+    setStartX(event.touches[0].clientX);
   };
 
   const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
@@ -119,7 +126,7 @@ export const Carousel: FC<PropsWithChildren> = ({ children }) => {
         return;
       }
 
-      const newX = event.touches.clientX;
+      const newX = event.touches[0].clientX;
       const diff = startX - newX;
       setOffset((current) => current + diff);
       setStartX(newX);

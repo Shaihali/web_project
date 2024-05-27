@@ -20,13 +20,12 @@ const Tabs = styled.ul`
 
 const TabsItem = styled.li`
   font-size: 2.2rem;
-  color: ${(props) => (props.$value === props.$label ? "#44597D" : "#B4B9BB")};
+  color: ${(props) => (props.isSelected ? "#44597D" : "#B4B9BB")};
   cursor: pointer;
-  border-bottom: ${(props) =>
-    props.$value === props.$label ? "2px solid #44597D" : ""};
+  border-bottom: ${(props) => (props.isSelected ? "2px solid #44597D" : "")};
   padding-bottom: 12px;
   position: relative;
-  bottom: ${(props) => (props.$value === props.$label ? "-2px" : "0")};
+  bottom: ${(props) => (props.isSelected ? "-2px" : "0")};
 `;
 
 type TabsComponentProps = {
@@ -44,8 +43,7 @@ export const TabsComponent: FC<TabsComponentProps> = ({ callback }) => {
       {TABS_LIST.map((tab) => (
         <TabsItem
           key={tab.id}
-          $label={tab.label}
-          $value={selected}
+          isSelected={selected === tab.label}
           onClick={() => handleClick(tab.label)}
         >
           {tab.value}

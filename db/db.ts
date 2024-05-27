@@ -1,6 +1,5 @@
 import { ICardData, ISmallCardData } from "@/types";
 
-
 const IMAGE_PATH_LARGE =
   "https://s3-alpha-sig.figma.com/img/e14d/869c/b80b878fe960c3607502514fd5d35b42?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qxKGfgMtOsydyT62icU6h267d2-qItMYGY7tfhgGrfZXFJERARR75Y7fatof4PJijve2YJxv0EVg3Lx9HEDwWl-y2S4R9YoHPcJFP67WIdrKpbcRLyIINEv5nzG0rda-E6aPf26JXNPm6~LjvN42T5LkaVfkP2Uu5p3a8Unr3p8yn70db1k~A1A8P0y9VQJ4x0eD6Lb8n~6YQcuDTR2ZUA82hXrpJPpt2jYn3oaKydApe4KvkxmG~rEoOo~5dcxTWQWRtT13~HbaHaLC2W2pk321T2ZWNOjlLyBJR9GNXgaJpW7ymATj~C99bgjRcMNKtUxjSbxYdegN7L4fc5Gruw__";
 const IMAGE_PATH_LARGE2 =
@@ -18,7 +17,6 @@ const IMAGE_PATH4 =
   "https://s3-alpha-sig.figma.com/img/b81f/d840/8e312fdf861f6520e8caaa3e6bd47939?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dR174hw0E6jlGG8WJviiei~c4hkjNasFMUcnirg6gS7yz1tOwQepDmeHCox~WxH~QkCPZ4g~0aHJl5tS5gOtMw5bEZnp2wJT5kXU-Lg~PA~e6iWYVJSNdqHe4ltNK36QJODzOEhGvQXuSRDNB2v0HY5O-f1pi25fMmVsVUoRxRaGCBfgDT0vrVL3Pq62fpyajEm6fTF9mq5KLPmMyNUPWRbUMCdH81lehZl~8lzbN00wgbniwa8QmAY2BYe7BUIO8hdHaUrYSlOoEeDP6oPCShOAY6EcNGE9pAbVsYnsg2TEAL6-PAXX6NCP0nxIKCB80ILiATEyDxNzHTGgkBzUvQ__";
 const IMAGE_PATH5 =
   "https://s3-alpha-sig.figma.com/img/69ab/816f/c3f69e2134406908cc4f3fc018a85b96?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kFiaiVzdGx5Ez13apr-ssgyEfK~NJMCTPvfihJlL3~aJT9GhiW0l68DOhhR3p44JzXZz815Ya3Ytw-~RY2RrOVvpCxBo2-oAq1jOSUoY8ZEgaoG4RDF4zTuV3qMi0qOarBVkhamZ1joXWBEHQDp9DKsp3vFMC-q5Q04X3Hbr~zbfeehaO7DTz6HIc7cS7s1CGIdvSIhBYvG5uvFFizW~Yc~jaO0vat0dllmbBfamS-hjItmv6f2sNl8fQbOo6YvKtDYkmKMzkJlI8cA52Pdo8a34CLehZ4QfGOWYItZKCTZLzUIi0R5XXRRgO0jAGF-XtdVBMIq~jWX2qhS-uB9CeA__";
-
 
 export const cardsData: ICardData[] = [
   {

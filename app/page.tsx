@@ -4,11 +4,13 @@ import {
   CarouselComponent,
   LargeCardComponent,
   SmallCardComponent,
+  TabsComponent,
   TopSectionComponent,
 } from "@/components";
 import { cardsData, smallCardsData } from "@/db";
 import { Flex } from "@/ui";
 import styled from "styled-components";
+import { useCallback } from "react";
 
 const dataValues = cardsData;
 const dataValues2 = smallCardsData;
@@ -61,6 +63,9 @@ const SmallCardContainer = styled.div`
 `;
 
 export default function Home() {
+  const handleTabsClick = useCallback((value: string) => {
+    console.log(value);
+  }, []);
   return (
     <main>
       <BackgroundContainer>
@@ -77,6 +82,8 @@ export default function Home() {
                 <SmallCardComponent key={data.id} data={data} />
               ))}
             </SmallCardContainer>
+            <TabsComponent callback={handleTabsClick} />
+            <div style={{ width: "100px" }}>ff</div>
           </Flex>
         </Wrapper>
       </BackgroundContainer>

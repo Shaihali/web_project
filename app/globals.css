@@ -7,8 +7,13 @@ body {
 
 h1,
 h3,
-p {
+p,
+ul {
   margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
 }
 
 @media screen and (max-width: 992px) {

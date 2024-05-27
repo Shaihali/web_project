@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 const TitleContainer = styled.div`
   display: flex;
+  margin-top: 100px;
+
+  @media ${(props) => props.theme.media.tablet} {
+    margin-top: 0;
+  }
 
   @media ${(props) => props.theme.media.large_phone} {
     flex-direction: column;

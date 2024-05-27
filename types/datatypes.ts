@@ -8,11 +8,17 @@ export interface ISmallCardData {
   id: number;
   description: string;
   image: string;
-};
+}
 
 export interface ICardData {
   id: number;
   title: string;
   description: string;
   image: string;
-};
+}
+
+export interface ITabsList {
+  id: number;
+  label: string;
+  value: string;
+}

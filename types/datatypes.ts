@@ -22,3 +22,10 @@ export interface ITabsList {
   label: string;
   value: string;
 }
+
+export interface IDocCardData {
+  id: number;
+  title: string;
+  image: string;
+  data?: { [key: string]: string };
+}

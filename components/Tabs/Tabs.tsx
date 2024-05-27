@@ -1,6 +1,7 @@
 import { ITabsList } from "@/types";
-import { FC, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
+import { CherdinskiyComponent } from "../Sections";
 
 const TABS_LIST: ITabsList[] = [
   { id: 1, value: "ОНК", label: "onk" },
@@ -28,27 +29,60 @@ const TabsItem = styled.li`
   bottom: ${(props) => (props.isSelected ? "-2px" : "0")};
 `;
 
-type TabsComponentProps = {
-  callback: (value: string) => void;
-};
-export const TabsComponent: FC<TabsComponentProps> = ({ callback }) => {
-  const [selected, setSelected] = useState();
+export const TabsComponent = () => {
+  const [selected, setSelected] = useState("cherdinskiy");
 
   const handleClick = (value: string) => {
     setSelected(value);
-    callback(value);
   };
+
+  const getContent = () => {
+    switch (selected) {
+      case "onk":
+        return {
+          content: <div>onk</div>,
+        };
+
+      case "convicted":
+        return {
+          content: <div>convicted</div>,
+        };
+
+      case "cherdinskiy":
+        return {
+          content: <CherdinskiyComponent />,
+        };
+
+      case "constituentDoc":
+        return {
+          content: <div>constituentDoc</div>,
+        };
+
+      case "privacyPolice":
+        return {
+          content: <div>privacyPolice</div>,
+        };
+      default:
+        return {
+          content: null,
+        };
+    }
+  };
+
   return (
-    <Tabs>
-      {TABS_LIST.map((tab) => (
-        <TabsItem
-          key={tab.id}
-          isSelected={selected === tab.label}
-          onClick={() => handleClick(tab.label)}
-        >
-          {tab.value}
-        </TabsItem>
-      ))}
-    </Tabs>
+    <>
+      <Tabs>
+        {TABS_LIST.map((tab) => (
+          <TabsItem
+            key={tab.id}
+            isSelected={selected === tab.label}
+            onClick={() => handleClick(tab.label)}
+          >
+            {tab.value}
+          </TabsItem>
+        ))}
+      </Tabs>
+      {getContent().content}
+    </>
   );
 };

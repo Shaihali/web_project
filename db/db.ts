@@ -1,4 +1,4 @@
-import { ICardData, ISmallCardData } from "@/types";
+import { ICardData, IDocCardData, ISmallCardData } from "@/types";
 
 const IMAGE_PATH_LARGE =
   "https://s3-alpha-sig.figma.com/img/e14d/869c/b80b878fe960c3607502514fd5d35b42?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qxKGfgMtOsydyT62icU6h267d2-qItMYGY7tfhgGrfZXFJERARR75Y7fatof4PJijve2YJxv0EVg3Lx9HEDwWl-y2S4R9YoHPcJFP67WIdrKpbcRLyIINEv5nzG0rda-E6aPf26JXNPm6~LjvN42T5LkaVfkP2Uu5p3a8Unr3p8yn70db1k~A1A8P0y9VQJ4x0eD6Lb8n~6YQcuDTR2ZUA82hXrpJPpt2jYn3oaKydApe4KvkxmG~rEoOo~5dcxTWQWRtT13~HbaHaLC2W2pk321T2ZWNOjlLyBJR9GNXgaJpW7ymATj~C99bgjRcMNKtUxjSbxYdegN7L4fc5Gruw__";
@@ -68,5 +68,43 @@ export const smallCardsData: ISmallCardData[] = [
     description:
       "Пермский краевой центр про профилактике и борьбе со СПИД и инфекционными заболеваниями",
     image: IMAGE_PATH3,
+  },
+];
+
+export const docCardData: IDocCardData[] = [
+  {
+    id: 1,
+    title: "Прогулки по Ныробу",
+    image: IMAGE_PATH5,
+    data: {
+      image: "../assets/card/image.png",
+      text: "Слухи из Ныроба поступали тревожные. Ещё страшнее звучали рассказы очевидцев о жизни в забытых северных деревнях. «Надо съездить, посмотреть», — подумал я. Внимательно изучил...",
+    },
+  },
+  {
+    id: 2,
+    title: "В отношении главы Чердынского района ведётся проверка ФСБ.",
+    image: IMAGE_PATH5,
+  },
+  {
+    id: 3,
+    title: "Павел Селуков: Ныроб не отпускает",
+    image: IMAGE_PATH5,
+  },
+  {
+    id: 4,
+    title:
+      "Чердынский участок недр может принести бюджету края около 450 млн руб.",
+    image: IMAGE_PATH5,
+  },
+  {
+    id: 5,
+    title: "ПАВЕЛ СЕЛУКОВ: «ЛЮДИ ПЕРМСКОГО СЕВЕРА. ЧТО УВИДЕЛОСЬ ЗА ТРИ ДНЯ»",
+    image: IMAGE_PATH5,
+  },
+  {
+    id: 6,
+    title: "ЧЕРДЫНСКИЕ ТУПИКИ",
+    image: IMAGE_PATH5,
   },
 ];

@@ -24,6 +24,7 @@ type ButtonProps = PropsWithChildren & {
   $background?: string;
   radius?: number;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  style?: object;
 };
 
 export const Button: FC<ButtonProps> = ({ children, ...props }) => {

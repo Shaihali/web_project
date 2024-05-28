@@ -11,7 +11,7 @@ const ImageContainer = styled.div`
   display: flex;
   gap: 32px;
 `;
-const ImageBox = styled.div`
+const ImageBox = styled.div<{ flex?: number }>`
   flex: ${(props) => `0 1 ${props.flex}%`};
   height: 500px;
 `;
@@ -26,13 +26,15 @@ const GridStyled = styled.div`
   display: grid;
   grid-template-columns: 39% 59%;
   column-gap: 32px;
-  padding: 16px 0;
+  margin-top: 30px;
 `;
 
 const Button_mod = styled(Button)`
   width: 100%;
   border: 1px solid;
   margin-top: 16px;
+  color: #44597d;
+  padding: 10px 0;
 `;
 const Text_mod = styled(Text)`
   grid-row-start: 1;
@@ -60,9 +62,9 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
         <Title size={4.8} color={"#44597D"}>
           {data.title}
         </Title>
-        <Button_mod>Открыть документ</Button_mod>
+        <Button_mod height={6.4}>Открыть документ</Button_mod>
         <Text_mod color="#44597D" size={2.6}>
-          {data.data?.text}
+          {String(data.data?.text)}
         </Text_mod>
       </GridStyled>
     </Container>

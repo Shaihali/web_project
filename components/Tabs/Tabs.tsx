@@ -19,7 +19,7 @@ const Tabs = styled.ul`
   //   padding: 10px;
 `;
 
-const TabsItem = styled.li`
+const TabsItem = styled.li<{ isSelected?: boolean }>`
   font-size: 2.2rem;
   color: ${(props) => (props.isSelected ? "#44597D" : "#B4B9BB")};
   cursor: pointer;
@@ -40,12 +40,12 @@ export const TabsComponent = () => {
     switch (selected) {
       case "onk":
         return {
-          content: <div>onk</div>,
+          content: <div>Нет Данных</div>,
         };
 
       case "convicted":
         return {
-          content: <div>convicted</div>,
+          content: <div>Нет Данных</div>,
         };
 
       case "cherdinskiy":
@@ -55,12 +55,12 @@ export const TabsComponent = () => {
 
       case "constituentDoc":
         return {
-          content: <div>constituentDoc</div>,
+          content: <div>Нет Данных</div>,
         };
 
       case "privacyPolice":
         return {
-          content: <div>privacyPolice</div>,
+          content: <div>Нет Данных</div>,
         };
       default:
         return {

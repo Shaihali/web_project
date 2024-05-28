@@ -10,12 +10,12 @@ const Container = styled.div`
 `;
 const PaginationBox = styled.div``;
 const ContentBox = styled.div``;
-const GridStyled = styled.div`
-  display: grid;
-  grid-template-columns: 472px 472px 472px;
-  grid-template-rows: 500px 340px;
+const FlexStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 32px;
   row-gap: 80px;
+  margin-top: 32px;
 `;
 export const CherdinskiyComponent = () => {
   const data = {
@@ -30,7 +30,7 @@ export const CherdinskiyComponent = () => {
       </Title>
       <ContentBox>
         <MainDocCardComponent data={mainDoc} />
-        <GridStyled>
+        <FlexStyled>
           {dataList.map((data) => {
             if (data.data) {
               return;
@@ -38,7 +38,7 @@ export const CherdinskiyComponent = () => {
               return <DocCardComponent key={data.id} data={data} />;
             }
           })}
-        </GridStyled>
+        </FlexStyled>
       </ContentBox>
       <PaginationBox></PaginationBox>
     </Container>

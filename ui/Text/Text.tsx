@@ -17,11 +17,9 @@ type TextProps = {
 };
 export const Text: FC<TextProps> = ({ children, ...props }) => {
   const { $textcut } = props;
-  return (
-    <TextStyled {...props}>
-      {children.length > $textcut!
-        ? `${children.slice(0, $textcut)}. . .`
-        : children}
-    </TextStyled>
-  );
+  const truncatedText =
+    children.length > $textcut!
+      ? `${children.slice(0, $textcut)}. . .`
+      : children;
+  return <TextStyled {...props}>{truncatedText}</TextStyled>;
 };

@@ -5,22 +5,39 @@ import styled from "styled-components";
 
 const Card = styled.div`
   height: 100%;
+  display: flex;
+  flex-direction: column;
   &:first-child {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    flex: 0 0 58%;
+    max-height: 684px;
+    min-height: 661px;
+
+    div > img {
+      height: 500px;
+    }
   }
   &:nth-child(2) {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    flex: 0 0 39%;
+    max-height: 684px;
+    min-height: 661px;
+
+    div > img {
+      height: 500px;
+    }
   }
-  &:last-child {
-    grid-column-start: 3;
-    grid-column-end: 5;
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    flex: 0 1 31.7%;
+    max-height: 556px;
+    min-height: 556px;
+
+    div > img {
+      height: 340px;
+    }
   }
 `;
-const ImageBox = styled.div`
-  height: 90%;
-`;
+const ImageBox = styled.div``;
 
 const Image = styled.img`
   width: 100%;
@@ -29,6 +46,13 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
+const Box = styled.div`
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+`;
 type DocCardComponent = {
   data: IDocCardData;
 };
@@ -38,12 +62,14 @@ export const DocCardComponent: FC<DocCardComponent> = ({ data }) => {
       <ImageBox>
         <Image src={data.image} alt="" />
       </ImageBox>
-      <Title size={2.6} color={"#44597D"}>
-        {data.title}
-      </Title>
-      <Button $background="filled" style={{ width: "100%" }}>
-        Открыть документ
-      </Button>
+      <Box>
+        <Title size={2.6} color={"#44597D"}>
+          {data.title}
+        </Title>
+        <Button $background="filled" style={{ width: "100%" }} height={6.4}>
+          Открыть документ
+        </Button>
+      </Box>
     </Card>
   );
 };

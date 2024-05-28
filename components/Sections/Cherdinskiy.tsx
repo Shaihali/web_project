@@ -9,7 +9,8 @@ const dataList = docCardData;
 const Container = styled.div`
   width: 100%;
   @media ${(props) => props.theme.media.small_phone} {
-    oadding-right: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
   }
 `;
 console.log(dataList);

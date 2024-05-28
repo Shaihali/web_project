@@ -44,6 +44,7 @@ const SmallCardContainer = styled.div`
 
   @media ${(props) => props.theme.media.tablet} {
     column-gap: 20px;
+    box-sizing: border-box;
   }
   @media ${(props) => props.theme.media.large_phone} {
     grid-template-columns: 1fr 1fr;
@@ -68,6 +69,7 @@ const Flex_mod = styled(Flex)`
 const BackGround = styled.div`
   position: absolute;
   top: 0;
+  left: 0;
   background-color: #cfd8dd;
   height: 648px;
   width: 100%;

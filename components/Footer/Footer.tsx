@@ -31,6 +31,10 @@ const TitleBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 388px;
+
+  @media ${(props) => props.theme.media.small_phone} {
+    width: 340px;
+  }
 `;
 const Connect = styled.div`
   display: flex;

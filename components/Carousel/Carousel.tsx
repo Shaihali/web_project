@@ -87,7 +87,6 @@ export const CarouselComponent: FC<PropsWithChildren> = ({ children }) => {
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setStartX(event.clientX);
-    console.log("событие Down", event.clientX);
   };
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -106,7 +105,6 @@ export const CarouselComponent: FC<PropsWithChildren> = ({ children }) => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    console.log("событие Up");
   };
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {

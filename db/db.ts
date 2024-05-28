@@ -18,13 +18,27 @@ const IMAGE_PATH4 =
 const IMAGE_PATH5 =
   "https://s3-alpha-sig.figma.com/img/69ab/816f/c3f69e2134406908cc4f3fc018a85b96?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kFiaiVzdGx5Ez13apr-ssgyEfK~NJMCTPvfihJlL3~aJT9GhiW0l68DOhhR3p44JzXZz815Ya3Ytw-~RY2RrOVvpCxBo2-oAq1jOSUoY8ZEgaoG4RDF4zTuV3qMi0qOarBVkhamZ1joXWBEHQDp9DKsp3vFMC-q5Q04X3Hbr~zbfeehaO7DTz6HIc7cS7s1CGIdvSIhBYvG5uvFFizW~Yc~jaO0vat0dllmbBfamS-hjItmv6f2sNl8fQbOo6YvKtDYkmKMzkJlI8cA52Pdo8a34CLehZ4QfGOWYItZKCTZLzUIi0R5XXRRgO0jAGF-XtdVBMIq~jWX2qhS-uB9CeA__";
 
+const IMAGE_PATH6 =
+  "https://s3-alpha-sig.figma.com/img/e33b/3156/d0e615d1c8ae61367bbf6058b55424e6?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DUZnZlsPl5yfncd-EDmjkmTc1idkBH0Zyid~fgmbqcRiaQvtjaRF~j8df3d-NgA0fW9iO2spdMRosR2LBCfSuq-RyhJEUWHI5n3Kn~2exa5-W-IM330TSNMDnKP6twPYH4H4TNh37dqrao0IrUu3V5aTWF6Um1jeC53F7Nrvkpr0DdBCbqpOZ1eXCu2M8e98jrkrd1p~KQIqQjm7mBsSfik6n9fHux0jiQrXweuQZjKslIM-SVfDRMfnb7py4Dc5B-S~obKwDn0BKw1lR4Or2Pj~6oNvrzFrBUhES~koIiSk5W0VD5p61Yn7EHCODRCTXKYMKAVUDofLoh0kUa2LlQ__";
+const IMAGE_PATH7 =
+  "https://s3-alpha-sig.figma.com/img/4acd/6955/32f94e99e784798d365c550eb913a20b?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RSKbhBlhmd9Nbyoif6g0aJCnKwhdol2pb~tLprPczXVh8~x81t2kZIhS0lJK3x2q9FhYpsojFMNABkD0q9DhE4yHzCp-LG7~QXT6tiM~4TUditmeNrTh5U~H2ET4gFE8SndUqwkSBbEOviiDazjNLxvUIQTBgJVTJ1bMOVREnTDT2XSqoYb~fH-N32LzDBCi0WSM7VN5nYs27kmTySTD3mBkTJ-0J4-oDm6m25IVqcw3-43RWN9ZSicDrapmY5UanWSl55hYrqtOzrl4tNTRbPOoUpM8DK2z98NDCtuMznRI3Aph6RNWJxGLzJHAlaMmo2Ra2xWd2~fEfuro64~x4A__";
+const IMAGE_PATH8 =
+  "https://s3-alpha-sig.figma.com/img/2d94/b569/d32cca26714326d40ed7523060b49aca?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GWA3uo3ba9fJZS7A2NlZrG6erJtCZP1TuyhOPC18TTvf~TwBprN0Fyfuz-GCnUbQ0p7dCDppHiSCRy2EL98f-EhOrsVoAbRXqaS1hqVaOCCf74cT~HsVMlhRaDndxbMn-jv-51ax7gvvrLxb~99f7Fh0YcAQo9O~CozO9eoXlyatrZcGwNpsJeLKKjspJhc1IEaAebMsR8yqohYvXIK2RgQQcVyXrb9VSJrBDoaGnj9l~CEGhTmiKEIN-ovhA97CWQK5u5MHgHpEi-eLmAI-3PUxaqq3BXMh~dnCN~SAhx7qdq0xUrj~BmufddgO4nT1~K9DP0j0-K6RVv80D6yxaw__";
+const IMAGE_PATH9 =
+  "https://s3-alpha-sig.figma.com/img/5ca2/1c03/a6d51869bd746d2cf677bd221970d00c?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NUvj-pqJ6vb71vcCorVoZXw7biJvbBV-yeVwagmaZ8B9r~fiSO~LDS7PdQJVuWFjyQqvjTtjrbsNiyhee1X8C72IdGhiHV-OWx32Q7iGBnE3HSvTaLUiR8v5IfJfv6nE9FNqxWrTLsbxqPXn0aApnclVlvPa0x48gfCAqecJBrMTMNt4UnK5frnVzDjRz9b7MfnBKY5TVwXU1zHMNW866LnT6ZAl7IovZ11D6EgMIlST0nzGrdzq-CxOZ2KS3Sy74U6TS5WNLbIX-MaZj5S-v~-YBLxOMssdneO1LAmR5X6k88-3dfEidd5FdZFFvKWbw7TCCpH62y~xoyM2AqRh5Q__";
+const IMAGE_PATH11 =
+  "https://s3-alpha-sig.figma.com/img/c69f/82e5/d800bf45ad8d4f2f0871021796dde408?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C5yyacW8cdoVlR-uaAQh~VIYxXSiMjwMX1gVkv0Hp16iNyC2-vpqrsPTWcLaHpKgBpPF~yxBNghSYvWQm9kgaV8YWOYPm-V0~OJPEhl-1x6s29De0LfissdgE702pFJF8zCIUU509KVmIhLtVvJbBcg0-~3JDU76kval3OCkpAxxa5mGrVBVqdikw3vezsrQLcRIIgKiLsfIvX9Q~Pg-8ZLRAn03B~FaLTNpdzsSyL1m9dPZlDFzdJ8JXDJx6rqmG7BimcP~RAVitCWROa49JgEiFJSkGOyiTMLYnEo3jWomwV1-dQW0ovmUgCbpBtbUZhoUxXmhVeLrfq86UrWaBg__";
+const IMAGE_PATH12 =
+  "https://s3-alpha-sig.figma.com/img/c892/1712/bdd5cd32c06adf5221e106fbcf6cbdef?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PdvwpJwK81hEP4bV55kIZioRdoHDuXi7NMTeuM5TZw7bYGH3WYpIeAlizKT8qlWAK~JHtKrvi38CU9ZwHniJJngjqpGHS3PZRQb65IP0fvyG9~hj6k85wa3maY32Yd9gBYnNUVYpmcpL7AP1sFM4ee~M8SMMFVWz218XllB8wuk47MLVwAvwNUI1na8NZKk66oWy-sF69b0Uj568N90bTqhIa6vfGFiVkOZlCEzqk95QGu5pnBfmz~rOUNvcFEOspuyXl29dUMTKoXFG6n7wIz5XqqKII-dDwpN~foXwqQpaxeEwy42kXviRPFA6Q2uTCqdHBtY3kk0jPxQWv~D9jQ__";
+const IMAGE_PATH13 =
+  "https://s3-alpha-sig.figma.com/img/6cbb/18b4/078f9db188c1b4e8774e68414135d627?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NGFGzSX0BjKJFHxEjMuyBRXaSz7acXR3JgAr9DSCM1BzUdPrg0m77gPl4q3T7hbLTfrClrAkjY9zAkA7sEiM~O30PpSMbvRM4wyfjiq9ihxv3eAP2YOCazsT46369CIcoy~NJeYGnBTwS3r08KQDG4o023B08CoiDzmkDiuUtAYxiogFsX2yGP2D1aBSG9QjiZiNBquVkadMt7jWvUZWw9gYoKDL-d0iBRya-ddqgwRa03GXxx2BlKg4GbTIffHhFhDlAFdfkPdKM-8I~WqsxXzIkfru4m1QWvjzjWwyI1R1GCfPMZ16hYTIS8IWLh3eaOyoXQsea~MUHe5VaURa0w__";
 export const cardsData: ICardData[] = [
   {
     id: 1,
     title: "Комплексная помощь женщинам",
     description:
       "без определенного места жительства освободившимся из МПС Пермского края",
-    image: IMAGE_PATH_LARGE,
+    image: IMAGE_PATH6,
   },
   {
     id: 2,
@@ -75,36 +89,36 @@ export const docCardData: IDocCardData[] = [
   {
     id: 1,
     title: "Прогулки по Ныробу",
-    image: IMAGE_PATH5,
+    image: IMAGE_PATH6,
     data: {
-      image: "../assets/card/image.png",
+      image: IMAGE_PATH7,
       text: "Слухи из Ныроба поступали тревожные. Ещё страшнее звучали рассказы очевидцев о жизни в забытых северных деревнях. «Надо съездить, посмотреть», — подумал я. Внимательно изучил...",
     },
   },
   {
     id: 2,
     title: "В отношении главы Чердынского района ведётся проверка ФСБ.",
-    image: IMAGE_PATH5,
+    image: IMAGE_PATH8,
   },
   {
     id: 3,
     title: "Павел Селуков: Ныроб не отпускает",
-    image: IMAGE_PATH5,
+    image: IMAGE_PATH9,
   },
   {
     id: 4,
     title:
       "Чердынский участок недр может принести бюджету края около 450 млн руб.",
-    image: IMAGE_PATH5,
+    image: IMAGE_PATH11,
   },
   {
     id: 5,
     title: "ПАВЕЛ СЕЛУКОВ: «ЛЮДИ ПЕРМСКОГО СЕВЕРА. ЧТО УВИДЕЛОСЬ ЗА ТРИ ДНЯ»",
-    image: IMAGE_PATH5,
+    image: IMAGE_PATH12,
   },
   {
     id: 6,
     title: "ЧЕРДЫНСКИЕ ТУПИКИ",
-    image: IMAGE_PATH5,
+    image: IMAGE_PATH13,
   },
 ];

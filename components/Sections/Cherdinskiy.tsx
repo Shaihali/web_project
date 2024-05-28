@@ -16,13 +16,20 @@ const FlexStyled = styled.div`
   column-gap: 32px;
   row-gap: 80px;
   margin-top: 32px;
+  justify-content: center;
+  @media ${(props) => props.theme.media.phone} {
+    flex-direction: column;
+  }
+  @media ${(props) => props.theme.media.small_phone} {
+    row-gap: 36px;
+  }
 `;
 export const CherdinskiyComponent = () => {
   const data = {
     title: "Чердынский район",
   };
   const mainDoc: IDocCardData = dataList.filter((data) => data.data)[0];
-  console.log(mainDoc);
+
   return (
     <Container>
       <Title tag={"h2"} size={6}>

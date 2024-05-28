@@ -27,6 +27,17 @@ const TabsItem = styled.li<{ isSelected?: boolean }>`
   padding-bottom: 12px;
   position: relative;
   bottom: ${(props) => (props.isSelected ? "-2px" : "0")};
+
+  @media ${(props) => props.theme.media.tablet} {
+    font-size: 1.6rem;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    font-size: 1rem;
+  }
+
+  @media ${(props) => props.theme.media.small_phone} {
+    margin-top: 20px;
+  }
 `;
 
 export const TabsComponent = () => {

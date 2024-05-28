@@ -12,8 +12,18 @@ const Card = styled.div`
     max-height: 684px;
     min-height: 661px;
 
+    @media ${(props) => props.theme.media.large_phone} {
+      flex: 1 0 58%;
+    }
+    @media ${(props) => props.theme.media.phone} {
+      min-height: 516px;
+    }
+
     div > img {
       height: 500px;
+      @media ${(props) => props.theme.media.phone} {
+        height: 360px;
+      }
     }
   }
   &:nth-child(2) {
@@ -21,16 +31,32 @@ const Card = styled.div`
     max-height: 684px;
     min-height: 661px;
 
+    @media ${(props) => props.theme.media.large_phone} {
+      flex: 1 0 39%;
+      min-height: 556px;
+    }
     div > img {
       height: 500px;
+      @media ${(props) => props.theme.media.large_phone} {
+        height: 340px;
+      }
+      @media ${(props) => props.theme.media.phone} {
+        height: 360px;
+      }
     }
   }
   &:nth-child(3),
   &:nth-child(4),
   &:nth-child(5) {
-    flex: 0 1 31.7%;
+    flex: 0 1 31.5%;
     max-height: 556px;
     min-height: 556px;
+    @media ${(props) => props.theme.media.large_phone} {
+      flex: 1 1 31.5%;
+    }
+    @media ${(props) => props.theme.media.small_phone} {
+      min-height: 456px;
+    }
 
     div > img {
       height: 340px;

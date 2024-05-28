@@ -6,6 +6,13 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: 663px;
+
+  @media ${(props) => props.theme.media.tablet} {
+    height: 726px;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    height: 580px;
+  }
 `;
 const ImageContainer = styled.div`
   display: flex;
@@ -13,7 +20,7 @@ const ImageContainer = styled.div`
 `;
 const ImageBox = styled.div<{ flex?: number }>`
   flex: ${(props) => `0 1 ${props.flex}%`};
-  height: 500px;
+  height: 300px;
 `;
 const Image = styled.img`
   width: 100%;
@@ -27,6 +34,11 @@ const GridStyled = styled.div`
   grid-template-columns: 39% 59%;
   column-gap: 32px;
   margin-top: 30px;
+
+  @media ${(props) => props.theme.media.phone} {
+    grid-template-rows: 0.5fr 1fr 1fr;
+    column-gap: 0px;
+  }
 `;
 
 const Button_mod = styled(Button)`
@@ -35,11 +47,31 @@ const Button_mod = styled(Button)`
   margin-top: 16px;
   color: #44597d;
   padding: 10px 0;
+
+  @media ${(props) => props.theme.media.phone} {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 `;
 const Text_mod = styled(Text)`
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 2;
+
+  @media ${(props) => props.theme.media.phone} {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+`;
+
+const Title_mod = styled(Title)`
+  @media ${(props) => props.theme.media.phone} {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 `;
 
 type MainDocCardComponentProps = {
@@ -55,13 +87,13 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
           <Image alt="" src={data.image} />
         </ImageBox>
         <ImageBox flex={60}>
-          <Image alt="" src={data.image} />
+          <Image alt="" src={data.data?.image} />
         </ImageBox>
       </ImageContainer>
       <GridStyled>
-        <Title size={4.8} color={"#44597D"}>
+        <Title_mod size={4.8} color={"#44597D"}>
           {data.title}
-        </Title>
+        </Title_mod>
         <Button_mod height={6.4}>Открыть документ</Button_mod>
         <Text_mod color="#44597D" size={2.6}>
           {String(data.data?.text)}

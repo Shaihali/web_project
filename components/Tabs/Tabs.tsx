@@ -2,6 +2,9 @@ import { ITabsList } from "@/types";
 import { useState } from "react";
 import styled from "styled-components";
 import { CherdinskiyComponent } from "../Sections";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "./style.css";
 
 const TABS_LIST: ITabsList[] = [
   { id: 1, value: "ОНК", label: "onk" },
@@ -93,6 +96,28 @@ export const TabsComponent = () => {
           </TabsItem>
         ))}
       </Tabs>
+      {/* <Swiper
+        slidesPerView={5}
+        centeredSlides={true}
+        spaceBetween={30}
+        grabCursor={true}
+        className="mySwiper"
+        breakpoints={{
+          1366: {
+            slidesPerView: 5,
+
+            spaceBetween: 0,
+            centeredSlides: false,
+            allowTouchMove: false,
+          },
+        }}
+      >
+        {TABS_LIST.map((tab) => (
+          <SwiperSlide key={tab.id} onClick={() => handleClick(tab.label)}>
+            {tab.value}
+          </SwiperSlide>
+        ))}
+      </Swiper> */}
       {getContent().content}
     </>
   );

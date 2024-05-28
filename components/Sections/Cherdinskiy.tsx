@@ -7,6 +7,9 @@ import { IDocCardData } from "@/types";
 const dataList = docCardData;
 const Container = styled.div`
   width: 100%;
+  @media ${(props) => props.theme.media.small_phone} {
+    oadding-right: 20px;
+  }
 `;
 const PaginationBox = styled.div``;
 const ContentBox = styled.div``;

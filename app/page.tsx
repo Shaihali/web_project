@@ -59,7 +59,7 @@ const SmallCardContainer = styled.div`
   }
   @media ${(props) => props.theme.media.small_phone} {
     margin: 0;
-    padding-right: 10px;
+    padding-right: 20px;
   }
 `;
 

@@ -33,7 +33,7 @@ const Card = styled.div`
   @media ${(props) => props.theme.media.small_phone} {
     max-height: 440px;
     min-height: 440px;
-    min-width: 380px;
+    min-width: 350px;
     max-width: 380px;
   }
 `;

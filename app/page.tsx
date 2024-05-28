@@ -12,6 +12,8 @@ import { cardsData, smallCardsData } from "@/db";
 import { Flex } from "@/ui";
 import styled from "styled-components";
 import { useCallback, memo, useState, ReactNode } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const dataValues = cardsData;
 const dataValues2 = smallCardsData;
@@ -21,6 +23,9 @@ const BackgroundContainer = styled.div`
   padding-bottom: 120px;
 
   @media ${(props) => props.theme.media.tablet} {
+    padding: 20px 0 20px 20px;
+  }
+  @media ${(props) => props.theme.media.small_phone} {
     padding: 20px 0 20px 20px;
   }
 `;
@@ -89,11 +94,41 @@ export default function Home() {
           <Flex_mod>
             <BackGround />
             <TopSectionComponent />
-            <CarouselComponent>
+            {/* <CarouselComponent> */}
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              className="mySwiper"
+              breakpoints={{
+                // when window width is >= 320px
+                1146: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                // when window width is >= 480px
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                // when window width is >= 640px
+                540: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                376: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                  width: 358,
+                },
+              }}
+            >
               {dataValues.map((data) => (
-                <LargeCardComponent key={data.id} data={data} />
+                <SwiperSlide key={data.id}>
+                  <LargeCardComponent data={data} />
+                </SwiperSlide>
               ))}
-            </CarouselComponent>
+            </Swiper>
+            {/* </CarouselComponent> */}
             <SmallCardContainer>
               {dataValues2.map((data) => (
                 <SmallCardComponent key={data.id} data={data} />

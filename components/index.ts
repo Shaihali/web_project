@@ -7,3 +7,5 @@ export * from "./Carousel";
 export * from "./Tabs";
 export * from "./Tabs";
 export * from "./Pagination";
+export * from "./Footer";
+export * from "./Footer";

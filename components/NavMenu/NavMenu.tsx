@@ -1,6 +1,7 @@
 import { BurgerMenuComponent } from "@/components";
 import { INavMenu } from "@/types";
 import Link from "next/link";
+import { FC } from "react";
 import styled from "styled-components";
 
 const LIST_DATA: INavMenu[] = [
@@ -12,14 +13,15 @@ const LIST_DATA: INavMenu[] = [
   { id: 6, label: "РЕКВИЗИТЫ", href: "/" },
 ];
 
-const List = styled.ul`
+const List = styled.ul<{ isView: string | undefined }>`
   display: flex;
   gap: 48px;
   align-items: center;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
   @media ${(props) => props.theme.media.tablet} {
-    display: none;
+    ${(props) => props.isView || "display: none"};
   }
 `;
 
@@ -39,11 +41,14 @@ const Links = styled.link`
   }
 `;
 
-export const NavMenuComponent = () => {
+type NavMenuComponentProps = {
+  pos?: string;
+};
+export const NavMenuComponent: FC<NavMenuComponentProps> = ({ pos }) => {
   return (
     <>
-      <BurgerMenuComponent data={LIST_DATA} />
-      <List>
+      {pos === "footer" ? "" : <BurgerMenuComponent data={LIST_DATA} />}
+      <List isView={pos}>
         {LIST_DATA.map((item) => (
           <Item key={item.id}>
             <Links as={Link} href={item.href}>

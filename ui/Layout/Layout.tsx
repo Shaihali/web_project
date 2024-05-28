@@ -1,5 +1,5 @@
 "use client";
-import { HeaderComponent } from "@/components";
+import { FooterComponent, HeaderComponent } from "@/components";
 import { FC, PropsWithChildren } from "react";
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
@@ -7,6 +7,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     <>
       <HeaderComponent />
       {children}
+      <FooterComponent />
     </>
   );
 };

@@ -17,10 +17,8 @@ const dataValues = cardsData;
 const dataValues2 = smallCardsData;
 
 const BackgroundContainer = styled.div`
-  padding-top: 120px;
-  background-color: #cfd8dd;
-  height: 678px;
   padding: 20px;
+  padding-bottom: 120px;
 
   @media ${(props) => props.theme.media.tablet} {
     padding: 20px 0 20px 20px;
@@ -63,6 +61,19 @@ const SmallCardContainer = styled.div`
   }
 `;
 
+const Flex_mod = styled(Flex)`
+  flex-direction: column;
+`;
+
+const BackGround = styled.div`
+  position: absolute;
+  top: 0;
+  background-color: #cfd8dd;
+  height: 648px;
+  width: 100%;
+  z-index: -1;
+`;
+
 // const MemoizedTopSectionComponent = memo(TopSectionComponent);
 // const MemoizedCarouselComponent = memo(CarouselComponent);
 // const MemoizedLargeCardComponent = memo(LargeCardComponent);
@@ -73,7 +84,8 @@ export default function Home() {
     <main>
       <BackgroundContainer>
         <Wrapper>
-          <Flex $direction="column">
+          <Flex_mod>
+            <BackGround />
             <TopSectionComponent />
             <CarouselComponent>
               {dataValues.map((data) => (
@@ -86,7 +98,7 @@ export default function Home() {
               ))}
             </SmallCardContainer>
             <TabsComponent />
-          </Flex>
+          </Flex_mod>
         </Wrapper>
       </BackgroundContainer>
     </main>

@@ -12,6 +12,7 @@ const Container = styled.div`
 
   @media ${(props) => props.theme.media.small_phone} {
     flex-direction: column;
+    height: 144px;
   }
 `;
 const PageBox = styled.div`

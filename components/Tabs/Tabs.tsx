@@ -1,7 +1,8 @@
 import { ITabsList } from "@/types";
 import { useState } from "react";
 import styled from "styled-components";
-import { CherdinskiyComponent } from "../Sections";
+import { CherdinskiyComponent, NoDataComponent } from "../Sections";
+import { PaginationComponent } from "../Pagination";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
 // import "./style.css";
@@ -54,12 +55,12 @@ export const TabsComponent = () => {
     switch (selected) {
       case "onk":
         return {
-          content: <div>Нет Данных</div>,
+          content: <NoDataComponent />,
         };
 
       case "convicted":
         return {
-          content: <div>Нет Данных</div>,
+          content: <NoDataComponent />,
         };
 
       case "cherdinskiy":
@@ -69,12 +70,12 @@ export const TabsComponent = () => {
 
       case "constituentDoc":
         return {
-          content: <div>Нет Данных</div>,
+          content: <NoDataComponent />,
         };
 
       case "privacyPolice":
         return {
-          content: <div>Нет Данных</div>,
+          content: <NoDataComponent />,
         };
       default:
         return {

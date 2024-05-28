@@ -11,7 +11,10 @@ const Container = styled.div`
     height: 726px;
   }
   @media ${(props) => props.theme.media.phone} {
-    height: 580px;
+    height: 600px;
+  }
+  @media ${(props) => props.theme.media.small_phone} {
+    height: 586px;
   }
 `;
 const ImageContainer = styled.div`
@@ -20,7 +23,13 @@ const ImageContainer = styled.div`
 `;
 const ImageBox = styled.div<{ flex?: number }>`
   flex: ${(props) => `0 1 ${props.flex}%`};
-  height: 300px;
+  height: 500px;
+  @media ${(props) => props.theme.media.large_phone} {
+    height: 460px;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    height: 300px;
+  }
 `;
 const Image = styled.img`
   width: 100%;

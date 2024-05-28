@@ -6,3 +6,4 @@ export * from "./Cards";
 export * from "./Carousel";
 export * from "./Tabs";
 export * from "./Tabs";
+export * from "./Pagination";

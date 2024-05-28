@@ -3,6 +3,7 @@ import { Button, Text, Title } from "@/ui";
 import styled from "styled-components";
 import { DocCardComponent, MainDocCardComponent } from "../Cards";
 import { IDocCardData } from "@/types";
+import { PaginationComponent } from "../Pagination";
 
 const dataList = docCardData;
 const Container = styled.div`
@@ -11,7 +12,7 @@ const Container = styled.div`
     oadding-right: 20px;
   }
 `;
-const PaginationBox = styled.div``;
+console.log(dataList);
 const ContentBox = styled.div``;
 const FlexStyled = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ export const CherdinskiyComponent = () => {
           })}
         </FlexStyled>
       </ContentBox>
-      <PaginationBox></PaginationBox>
+      <PaginationComponent />
     </Container>
   );
 };

@@ -1,5 +1,6 @@
 import { IDocCardData } from "@/types";
 import { Button, Text, Title } from "@/ui";
+import Link from "next/link";
 import { FC } from "react";
 import styled from "styled-components";
 
@@ -103,7 +104,9 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
         <Title_mod size={4.8} color={"#44597D"}>
           {data.title}
         </Title_mod>
-        <Button_mod height={6.4}>Открыть документ</Button_mod>
+        <Button_mod height={6.4} as={Link} href={`/articles/${data.id}`}>
+          Открыть документ
+        </Button_mod>
         <Text_mod color="#44597D" size={2.6}>
           {String(data.data?.text)}
         </Text_mod>

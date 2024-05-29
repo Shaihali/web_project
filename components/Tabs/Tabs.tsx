@@ -23,14 +23,14 @@ const Tabs = styled.ul`
   //   padding: 10px;
 `;
 
-const TabsItem = styled.li<{ isSelected?: boolean }>`
+const TabsItem = styled.li<{ $isSelected?: boolean }>`
   font-size: 2.2rem;
-  color: ${(props) => (props.isSelected ? "#44597D" : "#B4B9BB")};
+  color: ${(props) => (props.$isSelected ? "#44597D" : "#B4B9BB")};
   cursor: pointer;
-  border-bottom: ${(props) => (props.isSelected ? "2px solid #44597D" : "")};
+  border-bottom: ${(props) => (props.$isSelected ? "2px solid #44597D" : "")};
   padding-bottom: 12px;
   position: relative;
-  bottom: ${(props) => (props.isSelected ? "-2px" : "0")};
+  bottom: ${(props) => (props.$isSelected ? "-2px" : "0")};
 
   @media ${(props) => props.theme.media.tablet} {
     font-size: 1.6rem;
@@ -90,7 +90,7 @@ export const TabsComponent = () => {
         {TABS_LIST.map((tab) => (
           <TabsItem
             key={tab.id}
-            isSelected={selected === tab.label}
+            $isSelected={selected === tab.label}
             onClick={() => handleClick(tab.label)}
           >
             {tab.value}

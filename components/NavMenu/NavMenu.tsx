@@ -13,7 +13,7 @@ const LIST_DATA: INavMenu[] = [
   { id: 6, label: "РЕКВИЗИТЫ", href: "/" },
 ];
 
-const List = styled.ul<{ isView: string | undefined }>`
+const List = styled.ul<{ $isView: string | undefined }>`
   display: flex;
   gap: 48px;
   align-items: center;
@@ -21,7 +21,7 @@ const List = styled.ul<{ isView: string | undefined }>`
   padding: 0;
   flex-wrap: wrap;
   @media ${(props) => props.theme.media.tablet} {
-    ${(props) => props.isView || "display: none"};
+    ${(props) => props.$isView || "display: none"};
   }
 `;
 
@@ -48,7 +48,7 @@ export const NavMenuComponent: FC<NavMenuComponentProps> = ({ pos }) => {
   return (
     <>
       {pos === "footer" ? "" : <BurgerMenuComponent data={LIST_DATA} />}
-      <List isView={pos}>
+      <List $isView={pos}>
         {LIST_DATA.map((item) => (
           <Item key={item.id}>
             <Links as={Link} href={item.href}>

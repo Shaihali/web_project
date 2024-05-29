@@ -31,20 +31,20 @@ const PageValueBox = styled.div`
   display: flex;
   gap: 4px;
 `;
-const PageValue = styled.div<{ isCurr: boolean }>`
+const PageValue = styled.div<{ $isCurr: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   width: 48px;
   height: 48px;
-  background-color: ${(props) => (props.isCurr ? "#44597d" : "")};
+  background-color: ${(props) => (props.$isCurr ? "#44597d" : "")};
   border: 1px solid #44597d;
   border-radius: 50%;
   color: #fff;
 `;
-const Value = styled.span<{ isCurr: boolean }>`
-  color: ${(props) => (props.isCurr ? "#fff" : "#000")};
+const Value = styled.span<{ $isCurr: boolean }>`
+  color: ${(props) => (props.$isCurr ? "#fff" : "#000")};
   font-size: 1.5rem;
 `;
 
@@ -93,8 +93,8 @@ export const PaginationComponent = () => {
         <Info>{`страница ${pageNum} из 2 (6 документов)`}</Info>
         <PageValueBox>
           {new Array(1, 2).map((el, index) => (
-            <PageValue key={index} isCurr={el === pageNum}>
-              <Value isCurr={el === pageNum}>{el}</Value>
+            <PageValue key={index} $isCurr={el === pageNum}>
+              <Value $isCurr={el === pageNum}>{el}</Value>
             </PageValue>
           ))}
         </PageValueBox>

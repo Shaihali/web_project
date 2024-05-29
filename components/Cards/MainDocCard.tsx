@@ -22,8 +22,8 @@ const ImageContainer = styled.div`
   display: flex;
   gap: 32px;
 `;
-const ImageBox = styled.div<{ flex?: number }>`
-  flex: ${(props) => `0 1 ${props.flex}%`};
+const ImageBox = styled.div<{ $flex?: number }>`
+  flex: ${(props) => `0 1 ${props.$flex}%`};
   height: 500px;
   @media ${(props) => props.theme.media.large_phone} {
     height: 460px;
@@ -92,10 +92,10 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
   return (
     <Container>
       <ImageContainer>
-        <ImageBox flex={40}>
+        <ImageBox $flex={40}>
           <Image alt="" src={data.image} />
         </ImageBox>
-        <ImageBox flex={60}>
+        <ImageBox $flex={60}>
           <Image alt="" src={data.data?.image} />
         </ImageBox>
       </ImageContainer>

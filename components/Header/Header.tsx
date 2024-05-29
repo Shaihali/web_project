@@ -4,7 +4,7 @@ import { Button, Flex, Title } from "@/ui";
 
 const Header = styled.header`
   background-color: #44597d;
-  height: 90px;
+  height: var(--header-height);
 `;
 const HeaderBox = styled.div`
   max-width: 1920px;

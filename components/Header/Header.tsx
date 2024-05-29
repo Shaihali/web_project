@@ -51,7 +51,7 @@ export const HeaderComponent = () => {
           </Logo>
           <NavMenuComponent />
         </Flex_mod>
-        <Button width={18.8} height={4.8}>
+        <Button width={18.8} height={4.8} href={"/"}>
           Помочь нам
         </Button>
       </HeaderBox>

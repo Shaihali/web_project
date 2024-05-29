@@ -1,5 +1,5 @@
 import { docCardData } from "@/db";
-import { Button, Text, Title } from "@/ui";
+import { Text, Title } from "@/ui";
 import styled from "styled-components";
 import { DocCardComponent, MainDocCardComponent } from "../Cards";
 import { IDocCardData } from "@/types";

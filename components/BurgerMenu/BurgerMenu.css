@@ -1,4 +1,4 @@
-.burger-checkbox {
+/* .burger-checkbox {
   position: absolute;
   visibility: hidden;
 }
@@ -74,4 +74,4 @@
 }
 .burger-checkbox:checked ~ .menu-list {
   transform: translateX(0);
-}
+} */

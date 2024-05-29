@@ -56,7 +56,6 @@ const Button_mod = styled(Button)`
   border: 1px solid;
   margin-top: 16px;
   color: #44597d;
-  padding: 10px 0;
 
   @media ${(props) => props.theme.media.phone} {
     grid-row-start: 3;
@@ -104,7 +103,7 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
         <Title_mod size={4.8} color={"#44597D"}>
           {data.title}
         </Title_mod>
-        <Button_mod height={6.4} as={Link} href={`/articles/${data.id}`}>
+        <Button_mod height={6.4} href={`/articles/${data.id}`}>
           Открыть документ
         </Button_mod>
         <Text_mod color="#44597D" size={2.6}>

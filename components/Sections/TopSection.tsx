@@ -49,7 +49,7 @@ export const TopSectionComponent = () => {
           Оформите регулярное пожертвование и мы превратим ваше желание в добрые
           дела.
         </Text>
-        <Button $background="filled" height={6.2} radius={32}>
+        <Button $background="filled" height={6.2} radius={32} href={"/"}>
           Поддержать
         </Button>
       </div>

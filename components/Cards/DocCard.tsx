@@ -99,7 +99,6 @@ export const DocCardComponent: FC<DocCardComponent> = ({ data }) => {
           $background="filled"
           style={{ width: "100%" }}
           height={6.4}
-          as={Link}
           href={`/articles/${data.id}`}
         >
           Открыть документ

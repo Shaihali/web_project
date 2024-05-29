@@ -45,18 +45,18 @@
   transition: bottom 0.3s, transform 0.3s 0.15s;
 }
 .menu-list {
-  top: 0;
+  top: 90px;
   left: 0;
   position: absolute;
-  display: grid;
-  gap: 12px;
-  padding: 42px 0;
-  margin: 0;
-  background: orange;
+  display: flex;
+  flex-direction: column;
+  background: #44597d;
   list-style-type: none;
   transform: translateX(-100%);
   transition: 0.3s;
-  width: 200px;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
 }
 .menu-item {
   display: block;

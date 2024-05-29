@@ -1,5 +1,7 @@
 import { IDocCardData } from "@/types";
 import { Button, Text, Title } from "@/ui";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FC } from "react";
 import styled from "styled-components";
 
@@ -83,6 +85,7 @@ type DocCardComponent = {
   data: IDocCardData;
 };
 export const DocCardComponent: FC<DocCardComponent> = ({ data }) => {
+  const route = useRouter();
   return (
     <Card>
       <ImageBox>
@@ -92,7 +95,13 @@ export const DocCardComponent: FC<DocCardComponent> = ({ data }) => {
         <Title size={2.6} color={"#44597D"}>
           {data.title}
         </Title>
-        <Button $background="filled" style={{ width: "100%" }} height={6.4}>
+        <Button
+          $background="filled"
+          style={{ width: "100%" }}
+          height={6.4}
+          as={Link}
+          href={`/articles/${data.id}`}
+        >
           Открыть документ
         </Button>
       </Box>

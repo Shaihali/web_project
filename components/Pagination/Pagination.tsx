@@ -75,7 +75,7 @@ const Button = styled.div`
 
 type PaginationComponentProps = {
   currentPage: number;
-  totalItems: number;
+  totalItems: number | null;
   setPagwNum: Dispatch<SetStateAction<number>>;
 };
 export const PaginationComponent: FC<PaginationComponentProps> = ({
@@ -83,8 +83,8 @@ export const PaginationComponent: FC<PaginationComponentProps> = ({
   totalItems,
   setPagwNum,
 }) => {
-  const remainDegree = totalItems % 6;
-  const length = Math.floor(totalItems / 6) + (remainDegree ? 1 : 0);
+  const remainDegree = totalItems! % 6;
+  const length = Math.floor(totalItems! / 6) + (remainDegree ? 1 : 0);
   const totalPages = Array.from({ length }, (_, index) => index + 1);
 
   const handleClickLeft = () => {

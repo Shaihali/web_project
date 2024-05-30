@@ -30,20 +30,27 @@ const SmallCardContainer = styled.div`
     padding-right: 20px;
   }
 `;
-
+interface IData {
+  //Временно
+  infoMinor: ISmallCardData[];
+}
+import db from "../../db/info_minor.json"; //Временно
+const URL = process.env.NEXT_PUBLIC_URL;
 export const InfoMinorComponent = () => {
-  const { data, isLoading, isSuccess } = useQuery({
-    queryFn: async () => {
-      const res = await fetch("http://localhost:3000/api/infominor");
-      return await res.json();
-    },
-    queryKey: ["infoMinor"],
-  });
+  const isSuccess = true; // временно
+  const data: IData = { infoMinor: db }; // временно
+  // const { data, isLoading, isSuccess } = useQuery({
+  //   queryFn: async () => {
+  //     const res = await fetch(`${URL}api/infominor`);
+  //     return await res.json();
+  //   },
+  //   queryKey: ["infoMinor"],
+  // });
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  console.log(data);
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
+
   return (
     <SmallCardContainer>
       {isSuccess

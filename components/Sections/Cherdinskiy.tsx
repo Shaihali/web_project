@@ -32,33 +32,55 @@ const FlexStyled = styled.div`
     row-gap: 36px;
   }
 `;
+
+interface IData {
+  //Временно
+  news: INew[];
+  count: number;
+}
+import db from "../../db/news.json"; //Временно
 export const CherdinskiyComponent = () => {
   const [pageNum, setPageNum] = useState<number>(1);
 
-  const { newsServices } = Services();
-  const {
-    data: news,
-    mutateAsync,
-    isSuccess,
-    status,
-  } = useMutation({
-    mutationFn: async (num: number) => await newsServices.getNews(num),
-    mutationKey: ["news"],
-  });
-  useEffect(() => {
-    mutateAsync(pageNum);
-  }, [pageNum]);
+  const DATA: IData = { news: db, count: 18 };
+  const isSuccess = true;
+  let res;
+  if (pageNum === 1) {
+    res = DATA.news.slice(0, 6);
+  } else if (pageNum === 2) {
+    res = DATA.news.slice(6, 12);
+  } else {
+    res = DATA.news.slice(12, 18);
+  }
+  console.log(pageNum, res);
+  // const { newsServices } = Services();
+  // const {
+  //   data: news,
+  //   mutateAsync,
+  //   isSuccess,
+  //   status,
+  // } = useMutation({
+  //   mutationFn: async (num: number) => await newsServices.getNews(num),
+  //   mutationKey: ["news"],
+  // });
+  // useEffect(() => {
+  //   mutateAsync(pageNum);
+  // }, [pageNum]);
 
   const data = {
     title: "Чердынский район",
   };
-  if (!(status === "success")) {
-    return <div>loading...</div>;
-  }
+  // if (!(status === "success")) {
+  //   return <div>loading...</div>;
+  // }
 
-  const lastNews = isSuccess ? findNewsClosestToDateToday(news.news) : [];
+  // const lastNews = isSuccess ? findNewsClosestToDateToday(news.news) : [];
+  // const otherNews = isSuccess
+  //   ? news.news.filter((item: INew) => item.id !== lastNews[0].id)
+  //   : [];
+  const lastNews = isSuccess ? findNewsClosestToDateToday(res) : [];
   const otherNews = isSuccess
-    ? news.news.filter((item: INew) => item.id !== lastNews[0].id)
+    ? res.filter((item: INew) => item.id !== lastNews[0].id)
     : [];
 
   return (
@@ -76,7 +98,7 @@ export const CherdinskiyComponent = () => {
       </ContentBox>
       <PaginationComponent
         setPagwNum={setPageNum}
-        totalItems={isSuccess ? news.count : null}
+        totalItems={isSuccess ? DATA.count : null}
         currentPage={pageNum}
       />
     </Container>

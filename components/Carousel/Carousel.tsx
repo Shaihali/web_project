@@ -1,25 +1,33 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { LargeCardComponent } from "../Cards";
 
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 import { ICardData } from "@/types";
 import "swiper/css";
 import "./Carousel.css";
 
+interface IData {
+  // временно
+
+  info: ICardData[];
+}
+import db from "../../db/info.json"; // временно
+const URL = process.env.NEXT_PUBLIC_URL;
 export const CarouselComponent = () => {
-  const { data, isLoading, isSuccess } = useQuery({
-    queryFn: async () => {
-      const res = await fetch("http://localhost:3000/api/info");
+  // const { data, isLoading, isSuccess } = useQuery({
+  //   queryFn: async () => {
+  //     const res = await fetch(`${URL}api/info`);
 
-      return await res.json();
-    },
-    queryKey: ["info"],
-  });
+  //     return await res.json();
+  //   },
+  //   queryKey: ["info"],
+  // });
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
+  const data: IData = { info: db }; // временно
+  const isSuccess = true; // временно
   return (
     <Swiper
       slidesPerView={1}

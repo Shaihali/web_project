@@ -2,6 +2,7 @@
 import {
   CarouselComponent,
   InfoMinorComponent,
+  TabsComponent,
   TopSectionComponent,
 } from "@/components";
 import { FC, PropsWithChildren } from "react";
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
   }
 `;
 const PaddingBox = styled.div`
-  padding: 20px;
+  // padding: 20px;
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
@@ -49,6 +50,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
           <TopSectionComponent />
           <CarouselComponent />
           <InfoMinorComponent />
+          <TabsComponent />
           {children}
         </PaddingBox>
       </Wrapper>

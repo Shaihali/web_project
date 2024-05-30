@@ -33,15 +33,15 @@ export interface IDocCardData {
 type Sections = {
   title: string;
   text: string;
-}
+};
 type FullArticles = {
   title: string;
-  sections: Sections[]
-}
+  sections: Sections[];
+};
 export interface INew {
   id: number;
   create_date: string;
-  image: string[];
+  images: string[];
   title: string;
   short_description: string;
   full_article: FullArticles;

@@ -1,12 +1,14 @@
-import { docCardData } from "@/db";
-import { Text, Title } from "@/ui";
+import { Title } from "@/ui";
 import styled from "styled-components";
 import { DocCardComponent, MainDocCardComponent } from "../Cards";
-import { IDocCardData } from "@/types";
+import { INew } from "@/types";
 import { PaginationComponent } from "../Pagination";
-import { useQuery } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 
-const dataList = docCardData;
+import { Services } from "@/services";
+import { findNewsClosestToDateToday } from "@/utils";
+import { useMutation } from "@tanstack/react-query";
+
 const Container = styled.div`
   width: 100%;
   @media ${(props) => props.theme.media.small_phone} {
@@ -31,47 +33,52 @@ const FlexStyled = styled.div`
   }
 `;
 export const CherdinskiyComponent = () => {
+  const [pageNum, setPageNum] = useState<number>(1);
+
+  const { newsServices } = Services();
   const {
     data: news,
-    error,
-    isLoading,
-  } = useQuery({
-    queryFn: async () => {
-      const response = await fetch("http://localhost:3000/api/news");
-      return await response.json();
-    },
-    queryKey: ["news"],
+    mutateAsync,
+    isSuccess,
+    status,
+  } = useMutation({
+    mutationFn: async (num: number) => await newsServices.getNews(num),
+    mutationKey: ["news"],
   });
-  if (isLoading) {
-    return <div>Loading...</div>;
-  } else if (error) {
-    console.error("Error:", error);
-  } else {
-    console.log("News:", news);
-  }
+  useEffect(() => {
+    mutateAsync(pageNum);
+  }, [pageNum]);
+
   const data = {
     title: "Чердынский район",
   };
-  const mainDoc: IDocCardData = dataList.filter((data) => data.data)[0];
+  if (!(status === "success")) {
+    return <div>loading...</div>;
+  }
+
+  const lastNews = isSuccess ? findNewsClosestToDateToday(news.news) : [];
+  const otherNews = isSuccess
+    ? news.news.filter((item: INew) => item.id !== lastNews[0].id)
+    : [];
 
   return (
     <Container>
-      <Title tag={"h2"} size={6}>
+      <Title tag={"h2"} size={6} color="#44597D">
         {data.title}
       </Title>
       <ContentBox>
-        <MainDocCardComponent data={mainDoc} />
+        <MainDocCardComponent data={lastNews[0]} />
         <FlexStyled>
-          {dataList.map((data) => {
-            if (data.data) {
-              return;
-            } else {
-              return <DocCardComponent key={data.id} data={data} />;
-            }
-          })}
+          {otherNews.map((data: INew) => (
+            <DocCardComponent key={data.id} data={data} />
+          ))}
         </FlexStyled>
       </ContentBox>
-      <PaginationComponent />
+      <PaginationComponent
+        setPagwNum={setPageNum}
+        totalItems={isSuccess ? news.count : null}
+        currentPage={pageNum}
+      />
     </Container>
   );
 };

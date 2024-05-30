@@ -1,11 +1,11 @@
 import { ITabsList } from "@/types";
-import { useState } from "react";
+
 import styled from "styled-components";
-import { CherdinskiyComponent, NoDataComponent } from "../Sections";
-import { PaginationComponent } from "../Pagination";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "./style.css";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "./tabs.css";
 
 const TABS_LIST: ITabsList[] = [
   { id: 1, value: "ОНК", label: "onk" },
@@ -23,103 +23,49 @@ const Tabs = styled.ul`
   //   padding: 10px;
 `;
 
-const TabsItem = styled.li<{ $isSelected?: boolean }>`
+const TabsItem = styled(Link)<{ $isSelected?: boolean }>`
   font-size: 2.2rem;
+  font-weight: ${(props) => (props.$isSelected ? "600" : "400")};
   color: ${(props) => (props.$isSelected ? "#44597D" : "#B4B9BB")};
   cursor: pointer;
-  border-bottom: ${(props) => (props.$isSelected ? "2px solid #44597D" : "")};
+  border-bottom: ${(props) => (props.$isSelected ? "3px solid #44597D" : "")};
   padding-bottom: 12px;
   position: relative;
-  bottom: ${(props) => (props.$isSelected ? "-2px" : "0")};
+  text-decoration: none;
+  bottom: ${(props) => (props.$isSelected ? "-7px" : "0")};
 
   @media ${(props) => props.theme.media.tablet} {
     font-size: 1.6rem;
   }
   @media ${(props) => props.theme.media.phone} {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   @media ${(props) => props.theme.media.small_phone} {
     margin-top: 20px;
   }
+  @media (max-width: 1366px) and (min-width: 376px) {
+    bottom: ${(props) => (props.$isSelected ? "0px" : "0")};
+    border-bottom: ${(props) => (props.$isSelected ? "0" : "")};
+    padding-bottom: 0px;
+  }
 `;
 
 export const TabsComponent = () => {
-  const [selected, setSelected] = useState("cherdinskiy");
-
-  const handleClick = (value: string) => {
-    setSelected(value);
-  };
-
-  const getContent = () => {
-    switch (selected) {
-      case "onk":
-        return {
-          content: <NoDataComponent />,
-        };
-
-      case "convicted":
-        return {
-          content: <NoDataComponent />,
-        };
-
-      case "cherdinskiy":
-        return {
-          content: <CherdinskiyComponent />,
-        };
-
-      case "constituentDoc":
-        return {
-          content: <NoDataComponent />,
-        };
-
-      case "privacyPolice":
-        return {
-          content: <NoDataComponent />,
-        };
-      default:
-        return {
-          content: null,
-        };
-    }
-  };
+  const params = useParams();
 
   return (
-    <>
-      <Tabs>
-        {TABS_LIST.map((tab) => (
+    <Swiper slidesPerView={2} spaceBetween={5} className="swiper_tab">
+      {TABS_LIST.map((tab) => (
+        <SwiperSlide key={tab.id}>
           <TabsItem
-            key={tab.id}
-            $isSelected={selected === tab.label}
-            onClick={() => handleClick(tab.label)}
+            href={`/${tab.label}`}
+            $isSelected={params.slug === tab.label}
           >
             {tab.value}
           </TabsItem>
-        ))}
-      </Tabs>
-      {/* <Swiper
-        slidesPerView={5}
-        centeredSlides={true}
-        spaceBetween={30}
-        grabCursor={true}
-        className="mySwiper"
-        breakpoints={{
-          1366: {
-            slidesPerView: 5,
-
-            spaceBetween: 0,
-            centeredSlides: false,
-            allowTouchMove: false,
-          },
-        }}
-      >
-        {TABS_LIST.map((tab) => (
-          <SwiperSlide key={tab.id} onClick={() => handleClick(tab.label)}>
-            {tab.value}
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
-      {getContent().content}
-    </>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };

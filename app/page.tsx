@@ -10,7 +10,6 @@ import { Flex } from "@/ui";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Link from "next/link";
 
 const dataValues = cardsData;
 const dataValues2 = smallCardsData;
@@ -131,8 +130,6 @@ export default function Home() {
           </Flex_mod>
         </Wrapper>
       </BackgroundContainer>
-      <Link href={"/employes"}>статик</Link>
-      <Link href={`/${slug}`}>динамик</Link>
     </main>
   );
 }

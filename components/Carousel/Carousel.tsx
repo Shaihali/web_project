@@ -4,6 +4,7 @@ import { LargeCardComponent } from "../Cards";
 import { useQuery } from "@tanstack/react-query";
 import { ICardData } from "@/types";
 import "swiper/css";
+import "./Carousel.css";
 
 export const CarouselComponent = () => {
   const { data, isLoading, isSuccess } = useQuery({

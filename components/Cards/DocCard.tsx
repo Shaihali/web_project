@@ -1,4 +1,4 @@
-import { IDocCardData } from "@/types";
+import { IDocCardData, INew } from "@/types";
 import { Button, Text, Title } from "@/ui";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -82,14 +82,15 @@ const Box = styled.div`
   flex: 1;
 `;
 type DocCardComponent = {
-  data: IDocCardData;
+  data: INew;
 };
 export const DocCardComponent: FC<DocCardComponent> = ({ data }) => {
+  // console.log(data.images[0]);
   const route = useRouter();
   return (
     <Card>
       <ImageBox>
-        <Image src={data.image} alt="" />
+        <Image src={data.images ? data.images[0] : undefined} alt="" />
       </ImageBox>
       <Box>
         <Title size={2.6} color={"#44597D"}>

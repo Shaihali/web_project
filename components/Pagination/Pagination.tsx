@@ -1,7 +1,7 @@
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import styled from "styled-components";
 
-import { useState } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 
 const Container = styled.div`
   margin-top: 48px;
@@ -73,11 +73,22 @@ const Button = styled.div`
   border-radius: 50%;
 `;
 
-export const PaginationComponent = () => {
-  const [pageNum, setPagwNum] = useState<number>(1);
+type PaginationComponentProps = {
+  currentPage: number;
+  totalItems: number;
+  setPagwNum: Dispatch<SetStateAction<number>>;
+};
+export const PaginationComponent: FC<PaginationComponentProps> = ({
+  currentPage,
+  totalItems,
+  setPagwNum,
+}) => {
+  const remainDegree = totalItems % 6;
+  const length = Math.floor(totalItems / 6) + (remainDegree ? 1 : 0);
+  const totalPages = Array.from({ length }, (_, index) => index + 1);
+
   const handleClickLeft = () => {
     setPagwNum((curr: number) => {
-      console.log(curr);
       if (curr === 1) {
         return 1;
       }
@@ -85,16 +96,22 @@ export const PaginationComponent = () => {
     });
   };
   const handleClickRight = () => {
-    setPagwNum((curr: number) => curr + 1);
+    setPagwNum((curr: number) => {
+      if (totalPages.length <= curr) {
+        return (curr = totalPages.length);
+      }
+      return curr + 1;
+    });
   };
+
   return (
     <Container>
       <PageBox>
-        <Info>{`страница ${pageNum} из 2 (6 документов)`}</Info>
+        <Info>{`страница ${currentPage} из ${totalPages.length} (${totalItems} документов)`}</Info>
         <PageValueBox>
-          {new Array(1, 2).map((el, index) => (
-            <PageValue key={index} $isCurr={el === pageNum}>
-              <Value $isCurr={el === pageNum}>{el}</Value>
+          {totalPages.map((el, index) => (
+            <PageValue key={index} $isCurr={el === currentPage}>
+              <Value $isCurr={el === currentPage}>{el}</Value>
             </PageValue>
           ))}
         </PageValueBox>

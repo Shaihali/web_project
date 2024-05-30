@@ -1,4 +1,4 @@
-import { IDocCardData } from "@/types";
+import { IDocCardData, INew } from "@/types";
 import { Button, Text, Title } from "@/ui";
 import Link from "next/link";
 import { FC } from "react";
@@ -84,7 +84,7 @@ const Title_mod = styled(Title)`
 `;
 
 type MainDocCardComponentProps = {
-  data: IDocCardData;
+  data: INew;
 };
 export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
   data,
@@ -93,10 +93,10 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
     <Container>
       <ImageContainer>
         <ImageBox $flex={40}>
-          <Image alt="" src={data.image} />
+          <Image alt="" src={data.images ? data.images[0] : undefined} />
         </ImageBox>
         <ImageBox $flex={60}>
-          <Image alt="" src={data.data?.image} />
+          <Image alt="" src={data.images ? data.images[1] : undefined} />
         </ImageBox>
       </ImageContainer>
       <GridStyled>
@@ -107,7 +107,7 @@ export const MainDocCardComponent: FC<MainDocCardComponentProps> = ({
           Открыть документ
         </Button_mod>
         <Text_mod color="#44597D" size={2.6}>
-          {String(data.data?.text)}
+          {String(data.short_description)}
         </Text_mod>
       </GridStyled>
     </Container>

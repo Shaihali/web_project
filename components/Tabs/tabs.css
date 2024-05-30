@@ -1,0 +1,12 @@
+.swiper_tab {
+  height: 54px;
+  margin-top: 0;
+  border-bottom: 2px solid #b4b9bb;
+}
+.swiper_tab .swiper-wrapper {
+  gap: 10px;
+  justify-content: space-between;
+}
+.swiper_tab .swiper-slide {
+  width: auto !important;
+}

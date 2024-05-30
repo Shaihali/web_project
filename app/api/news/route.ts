@@ -1,6 +1,6 @@
-export async function GET() {
-  const res = await import("../news");
-  const data = await res.json();
+import news from '../../../db/news.json'
 
-  return Response.json({ data });
+export async function GET() {
+
+  return Response.json({ news })
 }

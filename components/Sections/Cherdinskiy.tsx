@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { DocCardComponent, MainDocCardComponent } from "../Cards";
 import { IDocCardData } from "@/types";
 import { PaginationComponent } from "../Pagination";
+import { useQuery } from "@tanstack/react-query";
 
 const dataList = docCardData;
 const Container = styled.div`
@@ -13,7 +14,7 @@ const Container = styled.div`
     box-sizing: border-box;
   }
 `;
-console.log(dataList);
+
 const ContentBox = styled.div``;
 const FlexStyled = styled.div`
   display: flex;
@@ -30,6 +31,24 @@ const FlexStyled = styled.div`
   }
 `;
 export const CherdinskiyComponent = () => {
+  const {
+    data: news,
+    error,
+    isLoading,
+  } = useQuery({
+    queryFn: async () => {
+      const response = await fetch("http://localhost:3000/api/news");
+      return await response.json();
+    },
+    queryKey: ["news"],
+  });
+  if (isLoading) {
+    return <div>Loading...</div>;
+  } else if (error) {
+    console.error("Error:", error);
+  } else {
+    console.log("News:", news);
+  }
   const data = {
     title: "Чердынский район",
   };

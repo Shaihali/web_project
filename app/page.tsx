@@ -1,8 +1,5 @@
 "use client";
-
 import {
-  CarouselComponent,
-  CherdinskiyComponent,
   LargeCardComponent,
   SmallCardComponent,
   TabsComponent,
@@ -11,9 +8,9 @@ import {
 import { cardsData, smallCardsData } from "@/db";
 import { Flex } from "@/ui";
 import styled from "styled-components";
-import { useCallback, memo, useState, ReactNode } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Link from "next/link";
 
 const dataValues = cardsData;
 const dataValues2 = smallCardsData;
@@ -81,11 +78,7 @@ const BackGround = styled.div`
   z-index: -1;
 `;
 
-// const MemoizedTopSectionComponent = memo(TopSectionComponent);
-// const MemoizedCarouselComponent = memo(CarouselComponent);
-// const MemoizedLargeCardComponent = memo(LargeCardComponent);
-// const MemoizedSmallCardComponent = memo(SmallCardComponent);
-
+const slug = "onk";
 export default function Home() {
   return (
     <main>
@@ -138,6 +131,8 @@ export default function Home() {
           </Flex_mod>
         </Wrapper>
       </BackgroundContainer>
+      <Link href={"/employes"}>статик</Link>
+      <Link href={`/${slug}`}>динамик</Link>
     </main>
   );
 }

@@ -29,3 +29,20 @@ export interface IDocCardData {
   image: string;
   data?: { [key: string]: string };
 }
+
+type Sections = {
+  title: string;
+  text: string;
+}
+type FullArticles = {
+  title: string;
+  sections: Sections[]
+}
+export interface INew {
+  id: number;
+  create_date: string;
+  image: string[];
+  title: string;
+  short_description: string;
+  full_article: FullArticles;
+}

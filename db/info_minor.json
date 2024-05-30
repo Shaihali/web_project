@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "description": "Уполномоченный по правам человека в Пермском крае",
+    "image": "https://s3-alpha-sig.figma.com/img/9da4/66fc/fc4ef1d53503d65669260ebb153c9895?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RbDsbL3wav-7nrMd~fnFi97GO4WlLdtW6vHW2L9KCLlCthSntlRJ7YzIeSaRy7FnlWkacc7v9PmTGkzfZSHHgcBaFvriJBK-oEOm~h7o1X6E-8RGeSJZe6yFvTkOM-mssXzGhz29Gyf~hFKL7RmBXHiP1-jd~cAG5whHVrgGem9Cg2IKHQNt-CYCoWx85sNgEG0TjNvuqFAVItSl4UZ6aW0WIFbM8dMJwUy13F-E1ZVAM-upZIKBqP1Y06mfYv8lWOfnpg~TlYHkqt-~BMnxf0fYeA8mbiy-yVKfvjLa34gstiihXlw7QhVB1-s4xC8EDx2Cj~s-D4sUDYQ~y9qQeg__"
+  },
+  {
+    "id": "2",
+    "description": "ГУФСИН России по Пермскому краю",
+    "image": "https://s3-alpha-sig.figma.com/img/3261/a5da/2491aaca49385e0a62bfaadf56c87015?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I2~oBk3SihYc0x6UE3B-~JCX8c9bMSxzJcwRSaY0M-jT-ac9tJFyE0J8TQpb6vzEHa68zgVXhJHn83ENVMydwEyzfMUZMUb~GkwjWieVPgiDtVJ9W77XMkhmXeSqcSWLZNeO1hoERJGOzagEdWHGmZLsVn~XJ4wGs76S~wA~OH~B3qmh~PF~O6g2pBsOiKqxBIRr~I9eBAy6Zg4DjBQxMqiLD7rWvW4t7afBdp772OCV9wqvlddg05dTDUgi57Jo1EANbv2LaHXAlm5KWIcTcDOF0FLpCV7zPRb3Vya5YBbYJXK4Mrg2KvCztNlBfzxJ~UvKCNauE~KTzVOPyeCHNA__"
+  },
+  {
+    "id": "3",
+    "description": "Министерство Социального Развития Пермского края",
+    "image": "https://s3-alpha-sig.figma.com/img/b81f/d840/8e312fdf861f6520e8caaa3e6bd47939?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dR174hw0E6jlGG8WJviiei~c4hkjNasFMUcnirg6gS7yz1tOwQepDmeHCox~WxH~QkCPZ4g~0aHJl5tS5gOtMw5bEZnp2wJT5kXU-Lg~PA~e6iWYVJSNdqHe4ltNK36QJODzOEhGvQXuSRDNB2v0HY5O-f1pi25fMmVsVUoRxRaGCBfgDT0vrVL3Pq62fpyajEm6fTF9mq5KLPmMyNUPWRbUMCdH81lehZl~8lzbN00wgbniwa8QmAY2BYe7BUIO8hdHaUrYSlOoEeDP6oPCShOAY6EcNGE9pAbVsYnsg2TEAL6-PAXX6NCP0nxIKCB80ILiATEyDxNzHTGgkBzUvQ__"
+  },
+  {
+    "id": "4",
+    "description": "АСЭТ - Альянс Социально-этнических технологий ",
+    "image": "https://s3-alpha-sig.figma.com/img/69ab/816f/c3f69e2134406908cc4f3fc018a85b96?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kFiaiVzdGx5Ez13apr-ssgyEfK~NJMCTPvfihJlL3~aJT9GhiW0l68DOhhR3p44JzXZz815Ya3Ytw-~RY2RrOVvpCxBo2-oAq1jOSUoY8ZEgaoG4RDF4zTuV3qMi0qOarBVkhamZ1joXWBEHQDp9DKsp3vFMC-q5Q04X3Hbr~zbfeehaO7DTz6HIc7cS7s1CGIdvSIhBYvG5uvFFizW~Yc~jaO0vat0dllmbBfamS-hjItmv6f2sNl8fQbOo6YvKtDYkmKMzkJlI8cA52Pdo8a34CLehZ4QfGOWYItZKCTZLzUIi0R5XXRRgO0jAGF-XtdVBMIq~jWX2qhS-uB9CeA__"
+  },
+  {
+    "id": "5",
+    "description": "Пермский краевой центр про профилактике и борьбе со СПИД и инфекционными заболеваниями",
+    "image": "https://s3-alpha-sig.figma.com/img/da83/f975/8da18de7bb3dfc93669e8870e608d88e?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kYhcKgVqs186nvRzlADyMjRO23MDFzzZcLkNTR5sHWeorFcqQUnnzYVYzelmZkvS3Oke1B6rJ~kDLBXJt~UvPb0Rz9oLOx-AwylH6FedmFJpTqOn4gqkH~sHCcPVWIco1Ccm9U22FDiFaTfS5Pb7t8tvVVryi59ulYcVZ~~DLnJrJhAZE2816ZjvSwFP4uo2R5OMJrPYXyKIMaE1rWFeXl~vB2YHVelrlma6vy1Y6Y4Xa2N~ov3aZR~TVClHyCyO9~v3oJAACOfrHS-mfjKrhjTLSM5cHv-SZXn7z9lW1PF3LHFKYW~Sa~761zbe19XWEAbasHe7Jnr~fMGua402Tg__"
+  }
+]

@@ -1,9 +1,12 @@
 "use client";
 import { Layout } from "@/ui";
-import { FC, PropsWithChildren } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { FC, PropsWithChildren, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 export const Providers: FC<PropsWithChildren> = ({ children }) => {
+  const [queryClient] = useState(() => new QueryClient());
+
   const theme = {
     media: {
       small_phone: "(max-width: 576px)",
@@ -14,8 +17,10 @@ export const Providers: FC<PropsWithChildren> = ({ children }) => {
     },
   };
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>{children}</Layout>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <Layout>{children}</Layout>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 };

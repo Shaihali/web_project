@@ -14,12 +14,16 @@ const TitleBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media ${(props) => props.theme.media.small_phone} {
+    margin: 40px 0;
+  }
 `;
 const Back = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  max-width: 85px;
+  max-width: 100px;
   height: 24px;
   gap: 8px;
   cursor: pointer;
@@ -79,8 +83,8 @@ export default function Articles() {
     <Wrapper>
       <TitleBox>
         <Back onClick={router.back}>
-          <IconArrowLeft size={"1.8rem"} stroke={1} />
-          <Text size={1.4} color="#44597D">
+          <IconArrowLeft size={"2rem"} stroke={1} />
+          <Text size={2.2} color="#44597D">
             Назад
           </Text>
         </Back>
@@ -98,7 +102,7 @@ export default function Articles() {
         <InfoBlock>
           <div>
             <IconCalendar stroke={0.8} size={"3.2rem"} />
-            <Text size={2.6} color="#44597D">
+            <Text size={2.3} color="#44597D">
               {dateCreatedFormat}
             </Text>
           </div>

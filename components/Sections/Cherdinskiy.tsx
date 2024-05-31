@@ -85,9 +85,12 @@ export const CherdinskiyComponent = () => {
 
   return (
     <Container>
-      <Title tag={"h2"} size={6} color="#44597D">
-        {data.title}
-      </Title>
+      <div style={{ margin: "48px 0" }}>
+        <Title tag={"h2"} size={6} color="#44597D">
+          {data.title}
+        </Title>
+      </div>
+
       <ContentBox>
         <MainDocCardComponent data={lastNews[0]} />
         <FlexStyled>

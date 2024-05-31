@@ -6,16 +6,16 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  height: 663px;
+  min-height: 663px;
 
   @media ${(props) => props.theme.media.tablet} {
-    height: 726px;
+    min-height: 726px;
   }
   @media ${(props) => props.theme.media.phone} {
-    height: 600px;
+    min-height: 600px;
   }
   @media ${(props) => props.theme.media.small_phone} {
-    height: 586px;
+    min-height: 586px;
   }
 `;
 const ImageContainer = styled.div`
@@ -46,7 +46,7 @@ const GridStyled = styled.div`
   margin-top: 30px;
 
   @media ${(props) => props.theme.media.phone} {
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.2fr;
     column-gap: 0px;
   }
 `;

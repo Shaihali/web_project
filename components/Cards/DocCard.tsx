@@ -1,6 +1,5 @@
-import { IDocCardData, INew } from "@/types";
+import { INew } from "@/types";
 import { Button, Text, Title } from "@/ui";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 import styled from "styled-components";

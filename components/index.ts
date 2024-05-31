@@ -9,3 +9,4 @@ export * from "./Tabs";
 export * from "./Pagination";
 export * from "./Footer";
 export * from "./Footer";
+export * from "./VideoPlayer";

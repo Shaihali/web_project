@@ -45,11 +45,17 @@ const ArticleBox = styled.article`
   gap: 24px;
   margin-bottom: 48px;
 `;
+const VideoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`;
 
 import db from "../../../db/news.json";
 import { INew } from "@/types";
 import { IconOdnoklassniki, IconSmile, IconTwitter, IconVK1 } from "@/assets";
 import Link from "next/link";
+import { VideoPlayer } from "@/components";
 
 const SOC_ITEMS: { id: number; icon: JSX.ElementType; href: string }[] = [
   { id: 1, icon: IconVK1, href: "https://vk.ru" },
@@ -81,6 +87,14 @@ export default function Articles() {
         <Title tag="h2" size={4.8} color="#44597D">
           {data[0].full_article.title}
         </Title>
+        {data[0].full_article.video && data[0].full_article.subTitle ? (
+          <VideoBlock>
+            <Text size={2.6} color="#858A92">
+              {data[0].full_article.subTitle}
+            </Text>
+            <VideoPlayer url={data[0].full_article.video} />
+          </VideoBlock>
+        ) : null}
         <InfoBlock>
           <div>
             <IconCalendar stroke={0.8} size={"3.2rem"} />

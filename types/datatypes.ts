@@ -36,6 +36,8 @@ type Sections = {
 };
 type FullArticles = {
   title: string;
+  subTitle: string | null;
+  video: string | null;
   sections: Sections[];
 };
 export interface INew {

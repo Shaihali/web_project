@@ -24,7 +24,7 @@ const Card = styled.div<CardStyledProps>`
     width: 374px;
   }
   @media ${(props) => props.theme.media.tablet} {
-    width: 324px;
+    width: 294px;
   }
   @media ${(props) => props.theme.media.phone} {
     width: 100%;

@@ -9,21 +9,14 @@ import { FC, PropsWithChildren } from "react";
 import styled from "styled-components";
 
 // Styles
-const Wrapper = styled.div`
-  max-width: 1480px;
-  margin: 0 auto;
 
-  @media ${(props) => props.theme.media.tablet} {
-    max-width: 1166px;
-  }
-`;
 const PaddingBox = styled.div`
   // padding: 20px;
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
 
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.media.phone} {
     padding: 20px 0 20px 20px;
   }
   @media ${(props) => props.theme.media.small_phone} {
@@ -44,7 +37,7 @@ const BackGround = styled.div`
 export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <main>
-      <Wrapper>
+      <>
         <PaddingBox>
           <BackGround />
           <TopSectionComponent />
@@ -53,7 +46,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
           <TabsComponent />
           {children}
         </PaddingBox>
-      </Wrapper>
+      </>
     </main>
   );
 };

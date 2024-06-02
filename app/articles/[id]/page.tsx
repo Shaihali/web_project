@@ -4,10 +4,10 @@ import { IconArrowLeft, IconCalendar } from "@tabler/icons-react";
 import { useParams, useRouter } from "next/navigation";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  max-width: 1480px;
-  margin: 0 auto;
-  padding: 0 40px;
+const Container = styled.div`
+  @media ${(props) => props.theme.media.phone} {
+    padding: 0 24px;
+  }
 `;
 const TitleBox = styled.div`
   margin: 80px 0;
@@ -80,7 +80,7 @@ export default function Articles() {
   });
   console.log(midifyArticles);
   return (
-    <Wrapper>
+    <Container>
       <TitleBox>
         <Back onClick={router.back}>
           <IconArrowLeft size={"2rem"} stroke={1} />
@@ -127,6 +127,6 @@ export default function Articles() {
           ))}
         </ArticleBox>
       ))}
-    </Wrapper>
+    </Container>
   );
 }

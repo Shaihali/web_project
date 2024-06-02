@@ -48,3 +48,18 @@ export interface INew {
   short_description: string;
   full_article: FullArticles;
 }
+
+type Contact = {
+  phone: string[];
+  email: string | null;
+  social: { [key: string]: string }[];
+}
+export interface IEmploye {
+  id: number;
+  full_name: string;
+  image: string | null;
+  contacts?: Contact;
+  job_title: string | null;
+  descriptions: string | null
+}
+

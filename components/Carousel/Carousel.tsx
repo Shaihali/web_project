@@ -34,7 +34,7 @@ export const CarouselComponent = () => {
       spaceBetween={30}
       className="mySwiper"
       breakpoints={{
-        1146: {
+        1366: {
           slidesPerView: 2,
           spaceBetween: 30,
         },

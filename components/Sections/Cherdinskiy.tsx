@@ -11,6 +11,10 @@ import { useMutation } from "@tanstack/react-query";
 
 const Container = styled.div`
   width: 100%;
+  @media ${(props) => props.theme.media.phone} {
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
   @media ${(props) => props.theme.media.small_phone} {
     padding-right: 20px;
     box-sizing: border-box;

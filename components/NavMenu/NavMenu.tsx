@@ -8,7 +8,7 @@ const LIST_DATA: INavMenu[] = [
   { id: 1, label: "ГЛАВНАЯ", href: "/" },
   { id: 2, label: "КОНТАКТЫ", href: "/" },
   { id: 3, label: "КАК ПОМОЧЬ", href: "/" },
-  { id: 4, label: "СОТРУДНИКИ", href: "/" },
+  { id: 4, label: "СОТРУДНИКИ", href: "/employes" },
   { id: 5, label: "ПАРТНЕРЫ", href: "/" },
   { id: 6, label: "РЕКВИЗИТЫ", href: "/" },
 ];

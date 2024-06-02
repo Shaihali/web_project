@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "full_name": "Каргапольцева Анна Вадимовна",
+    "image": "https://s3-alpha-sig.figma.com/img/c41c/e7a8/bf021f7124d584e5fc1d1e1757c1a4cc?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W9~mlDF7Z02IEvrDENd-l54lpnGRYie5mk5TMMjhi7BKtMHumHLrjP0rw3SA~lVCroDk-maA24IhNR-rmdDyjLx3jhyP6uDhqLPu4mJeqSVZt~-ePENJnYtv52I4Ne9FUKYkqYqk9cBvehdfWYh-f3Oc6hxwIBvgbPeX0DKvufbKsglIHZ7GT-HdxIezZP9~TN55~8xQSVqlDoI3aRdpnoN7CTq4EZbLJ~GyyUQpvNiO1uAdcifvtp4Xd~FbM1TsB8EW~AwRYskf~tXYdrDGQIxaI4ecYcX-1YMdQTEFP4PFHTZ8q1HkyYFIQDnC7CgoemC--Wg0ogQYyo3MrEbQEA__",
+    "contacts": {
+      "phone": ["+79027960792", "+79991257855"],
+      "email": "proo.vybor@gmail.com",
+      "social": [
+        { "vkontakte": "https://vk.ru", "facebook": "https://facebook.com" }
+      ]
+    },
+    "job_title": "Президент и учредитель МООСПП ' Выбор'",
+    "descriptions": "Опыт взаимодействия с ГУФСИН России по Пермскому краю более 19 лет, в качестве руководителя МООСПП 'Выбор' с 2008 года. Член Общественной Наблюдательной Комиссии Пермского края по концетрации и наблюжения"
+  },
+  {
+    "id": 2,
+    "full_name": "Горланов Сергей Валентинович",
+    "image": "https://s3-alpha-sig.figma.com/img/7301/e241/41571d75b141a0d66a78466ae713a73f?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lv9dZJXFmCchHS6RSkkuCCVWbD5hb3dsujwUfhIXoV6KAmgmOSgMz-SvtVrB2gMJlHzA0zMI9u1mEPHvzhZAcWP2GXUy6VuP2bGV4UkeIhxyd6JLEucqiuMz4O7Zd2yOyhvYsc~jjz1qwLIu9cUZ1zBhRsCDOaR3hRiVlzHvQLXORSo-RB7HGMvoJi6~F237ddiFs8QclOk89RKrsxPW3qWGia9-e9XRchkvQZEh5lIx0Bk5sTrAn8Hvu~xNKbV91D7v2h9V~9J4UjssA0w5rL6dvx7V4jPXm1Iq4eePJSsX8OAjHBi~zx5ycy0x~WgRgdjqD3vJk5TBf2WcYZU-qA__",
+    "contacts": {
+      "phone": ["+79028037922"],
+      "email": "gorlanov@vybor.su",
+      "social": [{ "vkontakte": "https://vk.ru" }]
+    },
+    "job_title": "Учредитель и председатель правления МООСПП 'Выбор'",
+    "descriptions": "Опыт взаимодействия с ГУФСИН России по Пермскому краю более 10 лет. Член Общественной наблюдательной комиссии Пермского края по контролю за соблюдением прав человека в местах лишения свободы"
+  },
+  {
+    "id": 3,
+    "full_name": "Семиколенов Леонид Александрович",
+    "image": "https://s3-alpha-sig.figma.com/img/8ff3/79d7/14f26e3e4b4408295a170dd73c2fd7c6?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AfHPlYfcz-SlrEMC25HOvGoUVhhSc-Au1JH2MrqxL3ZPQF0DfeY~6htCmxHgW5C9RjPpzYvjk8b-UW5kOqGLrHyzBCNi4cuRU6zI6qoUol2-LrZ4qR-IliFDxO-lBdHWiltfWVG5epDgoTE11XWSf8P9RJWP5srwFtRAtKxjAB44fcHDI3GotdCEb0m4SmWxrl-sQkumwbi1RnjvbW2wHiS5yP9pSYhrhv2exy-RQuzisd33LPiDGkkGtf1gkhTsjwWLl~mb8IrqDS7pQMD2CDtqXx-Uyrar29FFfOYzFvye~B42TDsVuO-vMw4pCd9joSxSXSbIbHHwlIBJB8Cjgw__",
+    "contacts": {
+      "phone": ["+9030496012"],
+      "email": "semikolenovla@mail.ru",
+      "social": [
+        { "vkontakte": "https://vk.ru", "facebook": "https://facebook.com" }
+      ]
+    },
+    "job_title": "Председатель Новосибирского отделения. Член правления МООСПП 'Выбор'",
+    "descriptions": "Куратор мероприятий Организации по программе 'Профилактика идеологии тюремной субкультуры'"
+  },
+  {
+    "id": 4,
+    "full_name": "Стариков Олег Борисович",
+    "image": "https://s3-alpha-sig.figma.com/img/f2f6/ddc5/42c1a9cfde2edaec3141a2439ff3aab8?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fSoiA7VjhcJIv4YC9lObKBuyH-RmU5zwzaoahI1zlg96Yzmumj5EJ4Iv1b65kPsxBhuSq020GbpUA1JcLtXvxNxmD-FBdosBznIusigC7wbn6y9hBrLiDVoaGcPRs3G0l-5RzSTV~QVPfPCtcUAk8BfxIPKJveL51HDcZSFv8myz8Dl1I92~47YylxkHXuI1DIlqXJlIrh~vyqfYYxxiJiuCFkyt2LtdlOChZd~xACSP4mVu~M8uIzBlGtlKwr8kWRE3fjU3HeLn8KQ6g9mL2hscMDL4vrXU40kWvk1sqJ~6yCpUX65B4kxJv61pQE~oqwjDI5pGW0ydValar8jENA__",
+    "contacts": {
+      "phone": [],
+      "email": null,
+      "social": [
+        { "vkontakte": "https://vk.ru", "facebook": "https://facebook.com" }
+      ]
+    },
+    "job_title": "Президент Фонда социальной и правовой поддержки граждан 'Независимость'.Куратор спортивных мероприятий МООСПП 'Выбор'",
+    "descriptions": "Чемпион Европы и мира. Чемпион России по тяжёлой атлетике среди ветеранов. Обладатель кубка мира Нахичевань 2014 г. Кубок мира Токио Япония 2016 г. Абсолютный победитель Всемирных игр (олимпийские игры)"
+  },
+  {
+    "id": 5,
+    "full_name": "Рябченко Анна Анатольевна",
+    "image": "https://s3-alpha-sig.figma.com/img/86d5/6683/bba6d870ae02dfa386819327fd4742b4?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HtMQUhoZzN-LGByG2~dQaYsjwv10EjPmP4utBG0WS-vbyPWWhLgUcBG6lV3R2HvQigoyw5toGCpU5q6KB-xPK-H-EQwC5httIUs6r~uMBakU6FSZoZaU12fbB6FQAu88zF3ZXPIt7CrGo77zTnTVN6ih~47WWwAwWOA6r4C8FCxW7SomKp77-1o4PgcTNb-NkBgHvili6CTJbS1wEb~XgZPs8OSl36XC1vnG7hcVVWWeDrPjNxJt7MsO9ELs-N0o-G~vqOARKOk1bjgpwPsRc1sS0z4pMHyJwc7X9vhDdem6npRU75Bn2x309CEepflxKxeBRYMn3c-qujNZzEL5ew__",
+    "contacts": {
+      "phone": [],
+      "email": null,
+      "social": [
+        { "vkontakte": "https://vk.ru", "facebook": "https://facebook.com" }
+      ]
+    },
+    "job_title": "Председатель Нижегородского отделения МООСПП 'Выбор'",
+    "descriptions": "Социолог. Преподаватель основ светской этики и религиозных культур. Куратор мероприятий Организации по профилактике экстремизма и терроризма."
+  },
+  {
+    "id": 6,
+    "full_name": "Старкова Марина Анатольевна",
+    "image": "https://s3-alpha-sig.figma.com/img/29df/188d/3ef2de2709e0065ce2d6063a6fec9485?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qNFKEAcdO5-55McWyZaUH1pS1KIGlzXx7PqFnFK3Eh~7FhtTH9mXAJ2n8HRkK9HYMKuDsX5-gTix5GCPFEkIanDd1W73dipdli2lUEuphqjgj8wJb2KmEcrZ6R2PvVl58Tol2QBzW-FV52Y5Zjp7J7BYJbX9dS2Ebgrn9lvbiDm4CFFVpa2kap5aUJNieY-vkrFub8SoS9G8DvwxOG2pytprKH0esOO7v9cwiZCjHAF4w99DBoEuQSJyhy3B4gsNMELkeE0apyimxzs~lNhUIAoUZeozk~gcBLJVF2ig9P7L6R4PplPNzPr5ghbqu9guWddKl4jPD4mO9zOVmsgkYg__",
+    "contacts": {
+      "phone": ["+79224709348"],
+      "email": "starkova@vybor.su",
+      "social": [
+        { "vkontakte": "https://vk.ru", "facebook": "https://facebook.com" }
+      ]
+    },
+    "job_title": null,
+    "descriptions": "Преподаватель религиовед.Член Общественного совета при УФСИН России по Тюменской Области. Опыт взаимодействия с ГУФСИН России более 20 лет."
+  },
+  {
+    "id": 7,
+    "full_name": "Желонкина Лариса Петровна",
+    "image": "https://s3-alpha-sig.figma.com/img/e215/912a/b486242ee576e0a4d7ba827f39e6d13c?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cGhVJMOCBx9nfxd--mDXYrslQhEFLiaYURv6ag23~-zaLa97RqEXqHdwBAcOKHuzGgbSoGNxPwZeQaB7y5nlSJ~yTZfwTxuh9gNkrKZyg~m~~3w39qW4f8FP2vu7rFzxsOBVVQxnIsG5UI~Y0vcwrLvoRFkgGcwub-NrkmqP0GFfaCerXUdCfcyBuk2S~eV4Y~5SkKu14maO10nkvDN-~wjIrFpUFYvI41c3ucHsVlY3LkdSreFvId5-TX6g~bZTh2pDnNRplv5IyuRu5dHgmsk6FcmMEVrQM5OHuqCL88nugXTJyKiBdVtwjllGjSG58Z4ngDScX~N3l9DWCMrpCg__",
+    "contacts": {
+      "phone": ["+79026477393", "+79824547551"],
+      "email": "zhel_larisa@mail.ru",
+      "social": [
+        { "vkontakte": "https://vk.ru", "facebook": "https://facebook.com" }
+      ]
+    },
+    "job_title": "Заместитель президента, администратор МООСПП 'Выбор'",
+    "descriptions": "Юрист. Эксперт Гильдии экспертов религии и права (г. Москва). Член Общественной наблюдательной комиссии Пермского края по контролю за соблюдением прав человека в местах принудительного содержания под стражей"
+  },
+  {
+    "id": 8,
+    "full_name": "Бармина Элеана Эмильевна",
+    "image": null,
+    "contacts": {
+      "phone": [],
+      "email": "barminar@mail.ru",
+      "social": []
+    },
+    "job_title": "Куратор образовательных программ. Специалист по медико-социальному сопровождению",
+    "descriptions": null
+  },
+  {
+    "id": 9,
+    "full_name": "Клыков Евгений Викторович",
+    "image": null,
+    "contacts": {
+      "phone": [],
+      "email": null,
+      "social": [{ "vkontakte": "https://vk.ru" }]
+    },
+    "job_title": "Тренер по подготовке к освобождению",
+    "descriptions": null
+  },
+  {
+    "id": 10,
+    "full_name": "Александров Анатолий Викторович",
+    "image": null,
+    "contacts": {
+      "phone": [],
+      "email": "uraletz@yandex.ru",
+      "social": [{ "vkontakte": "https://vk.ru" }]
+    },
+    "job_title": "Лектор по программе 'Безопасное трудоустройство'",
+    "descriptions": null
+  }
+]

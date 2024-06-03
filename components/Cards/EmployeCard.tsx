@@ -36,6 +36,7 @@ const ImageBox = styled.div`
   position: relative;
   height: 600px;
   width: 100%;
+  overflow: hidden;
 
   @media ${(props) => props.theme.media.tablet} {
     height: 490px;
@@ -46,7 +47,7 @@ const ImageBox = styled.div`
 
   > img {
     width: 100%;
-    height: 100%;
+    height: auto !important;
     object-fit: cover;
     border-top-right-radius: 24px;
     border-top-left-radius: 24px;
@@ -70,12 +71,7 @@ export const EmployeCardComponent: FC<EmployeCardComponentProps> = ({
   return (
     <Card>
       <ImageBox>
-        <Image
-          src={image ? image : INITIAL}
-          alt="employee"
-          fill
-          style={{ objectFit: "fill" }}
-        />
+        <Image src={image ? image : INITIAL} alt="employee" fill />
       </ImageBox>
       <InfoBox>
         <Flex $justify="space-between">
